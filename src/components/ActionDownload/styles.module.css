@@ -1,0 +1,12 @@
+.cards {
+    padding: 2rem 0;
+    width: 100%;
+}
+
+.card__link {
+    font-size: 13pt;
+}
+
+.card__link:not(:last-child) {
+    margin-right: 1.5rem;
+}
