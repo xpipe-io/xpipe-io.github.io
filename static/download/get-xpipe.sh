@@ -96,8 +96,7 @@ install() {
 
   case "$uname_str" in
     Linux)
-      local debian=$(test -f "/etc/debian_version")
-      if [ "$debian" == 1 ]; then
+      if [ -f "/etc/debian_version" ]; then
         sudo apt-get install "$file"
       else
         sudo dnf install "$file"
