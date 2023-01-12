@@ -1,23 +1,37 @@
 #!/usr/bin/env bash
 
-# This is the bootstrap Unix installer served by `https://get.volta.sh`.
-# Its responsibility is to query the system to determine what OS the system
-# has, fetch and install the appropriate build of Volta, and modify the user's
-# profile.
-
 release_url() {
-  echo "https://github.com/xpipe-io/xpipe-app/releases/latest/download/"
+  echo "https://github.com/xpipe-io/xpipe-app/releases/latest/download"
+}
+
+get_file_ending() {
+  local uname_str="$(uname -s)"
+  case "$uname_str" in
+    Linux)
+      if [ -f "/etc/debian_version" ]; then
+        echo "deb"
+      else
+        echo "rpm"
+      fi
+      ;;
+    Darwin)
+      echo "pkg"
+      ;;
+    *)
+      exit 1
+  esac
 }
 
 download_release_from_repo() {
   local os_info="$1"
   local tmpdir="$2"
-  local ending=get_file_ending "$os_info"
+  local ending=$(get_file_ending)
 
   local filename="xpipe-installer-$os_info.$ending"
   local download_file="$tmpdir/$filename"
   local archive_url="$(release_url)/$filename"
 
+  info "Downloading file $archive_url"
   curl --progress-bar --show-error --location --fail "$archive_url" --output "$download_file" --write-out "$download_file"
 }
 
@@ -74,26 +88,6 @@ parse_os_info() {
       return 1
   esac
   return 0
-}
-
-get_file_ending() {
-  local uname_str="$1"
-
-  case "$uname_str" in
-    Linux)
-      local debian=$(test -f "/etc/debian_version")
-      if [ "$debian" == 1 ]; then
-        echo "deb"
-      else
-        echo "rpm"
-      fi
-      ;;
-    Darwin)
-      echo "pkg"
-      ;;
-    *)
-      exit 1
-  esac
 }
 
 install() {
@@ -174,8 +168,8 @@ download_archive="$(download_release; exit "$?")"
 exit_status="$?"
 if [ "$exit_status" != 0 ]
 then
-  error "Could not download X-Pipe version '$version'."
-  return "$exit_status"
+  error "Could not download X-Pipe release."
+  exit "$exit_status"
 fi
 
 install "$download_archive"
