@@ -110,11 +110,11 @@ const config = {
             items: [
               {
                 label: 'Privacy Policy',
-                to: '/',
+                to: '/privacy-policy',
               },
               {
                 label: 'Imprint',
-                to: '/',
+                to: '/imprint',
               }
             ],
           },

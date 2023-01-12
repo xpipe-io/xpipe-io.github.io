@@ -1,6 +1,7 @@
 import styles from "./styles.module.css";
 import ActionCard from "../ActionCard"
 import React from "react"
+// @ts-ignore
 import BashScript from "./bash-script.mdx";
 import MDXContent from '@theme/MDXContent';
 
@@ -41,7 +42,6 @@ There is also no autoupdate functionality included."
                     icon={
                         <img src="/img/portable.svg" width="80px"/>
                     }
-                    skin="primary"
                 >
                     <a className={styles.card__link}
                        href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-portable-windows-x86_64.zip">
@@ -64,7 +64,6 @@ There is also no autoupdate functionality included."
                     icon={
                         <img src="/img/script.svg" width="80px"/>
                     }
-                    skin="primary"
                 >
                     <div>
                         <h5>Bash (Linux / MacOS)</h5>
