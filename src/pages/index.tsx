@@ -18,16 +18,6 @@ export default function Home(): JSX.Element {
                 <div className="container">
                     <img src="img/logo_large.svg" />
                     <p className="hero__subtitle">{siteConfig.tagline}</p>
-                    <div className={styles.buttons}>
-                        <Link
-                            className={classnames(
-                                'button button--outline button--secondary button--lg',
-                                styles.getStarted,
-                            )}
-                            to={useBaseUrl('docs/guides/1-getting-started')}>
-                            Get Started
-                        </Link>
-                    </div>
                 </div>
             </header>
             <main className={styles.content}>
