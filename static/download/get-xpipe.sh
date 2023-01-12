@@ -27,7 +27,7 @@ download_release_from_repo() {
   local tmpdir="$2"
   local ending=$(get_file_ending)
 
-  local filename="xpipe-installer-$os_info.$ending"
+  local filename="xpipe-installer-$os_info-x86_64.$ending"
   local download_file="$tmpdir/$filename"
   local archive_url="$(release_url)/$filename"
 

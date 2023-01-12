@@ -7,6 +7,7 @@ type Props = {
     title: React.ReactNode
     description: React.ReactNode
     icon?: React.ReactNode
+    children: any
     className?: string
 }
 

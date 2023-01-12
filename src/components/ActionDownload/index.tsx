@@ -17,20 +17,20 @@ export const ActionDownload = () => (
 With the installer you can also make use of the optional autoupdate functionality."
                 >
                     <a className={styles.card__link}
-                       href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-installer-windows.msi">
-                        Windows .msi Installer&nbsp;&nbsp;&gt;
+                       href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-installer-windows-x86_64.msi">
+                        Windows .msi installer (x86_64)&nbsp;&nbsp;&gt;
                     </a>
                     <a className={styles.card__link}
-                       href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-installer-linux.deb">
-                        Linux .deb Installer&nbsp;&nbsp;&gt;
+                       href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-installer-linux-x86_64.deb">
+                        Linux .deb installer (x86_64)&nbsp;&nbsp;&gt;
                     </a>
                     <a className={styles.card__link}
-                       href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-installer-linux.rpm">
-                        Linux .rpm Installer&nbsp;&nbsp;&gt;
+                       href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-installer-linux-x86_64.rpm">
+                        Linux .rpm installer (x86_64)&nbsp;&nbsp;&gt;
                     </a>
                     <a className={styles.card__link}
-                       href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-installer-mac.pkg">
-                        MacOS .pkg Installer&nbsp;&nbsp;&gt;
+                       href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-installer-macos-x86_64.pkg">
+                        MacOS .pkg installer (x86_64)&nbsp;&nbsp;&gt;
                     </a>
                 </ActionCard>
 
@@ -44,16 +44,16 @@ There is also no autoupdate functionality included."
                     skin="primary"
                 >
                     <a className={styles.card__link}
-                       href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-portable-windows.zip">
-                        Windows .zip archive &nbsp;&nbsp;&gt;
+                       href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-portable-windows-x86_64.zip">
+                        Windows .zip archive (x86_64)&nbsp;&nbsp;&gt;
                     </a>
                     <a className={styles.card__link}
-                       href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-portable-linux.tar.gz">
-                        Linux .tar.gz archive &nbsp;&nbsp;&gt;
+                       href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-portable-linux-x86_64.tar.gz">
+                        Linux .tar.gz archive (x86_64)&nbsp;&nbsp;&gt;
                     </a>
                     <a className={styles.card__link}
-                       href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-portable-mac.dmg">
-                        MacOS .dmg archive &nbsp;&nbsp;&gt;
+                       href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-portable-macos-x86_64.dmg">
+                        MacOS .dmg archive (x86_64)&nbsp;&nbsp;&gt;
                     </a>
                 </ActionCard>
 
