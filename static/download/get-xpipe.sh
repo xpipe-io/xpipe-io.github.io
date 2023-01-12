@@ -90,16 +90,14 @@ parse_os_info() {
   return 0
 }
 
-install() {
+uninstall() {
   local uname_str="$(uname -s)"
-  local file="$1"
-
   case "$uname_str" in
     Linux)
       if [ -f "/etc/debian_version" ]; then
-        sudo apt-get install "$file"
+        DEBIAN_FRONTEND=noninteractive sudo apt-get remove -qy xpipe
       else
-        sudo dnf install "$file"
+        sudo rpm -e xpipe
       fi
       ;;
     Darwin)
@@ -108,6 +106,30 @@ install() {
     *)
       exit 1
   esac
+}
+
+install() {
+  local uname_str="$(uname -s)"
+  local file="$1"
+
+  case "$uname_str" in
+    Linux)
+      if [ -f "/etc/debian_version" ]; then
+        DEBIAN_FRONTEND=noninteractive sudo apt-get install -qy "$file"
+      else
+        sudo rpm -i "$file"
+      fi
+      ;;
+    Darwin)
+      sudo pkg ...
+      ;;
+    *)
+      exit 1
+  esac
+}
+
+launch() {
+  xpipe open
 }
 
 parse_os_pretty() {
@@ -171,4 +193,6 @@ then
   exit "$exit_status"
 fi
 
+uninstall
 install "$download_archive"
+launch
