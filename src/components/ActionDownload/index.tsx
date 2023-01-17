@@ -13,30 +13,30 @@ export const ActionDownload = () => (
                     icon={
                         <img width="80px" src="/img/install-setup-product-icon.svg"/>
                     }
-                    title="Installers"
+                    title="Installer"
                     description="Installers handle the setup out of the box.
 With the installer you can also make use of the optional autoupdate functionality."
                 >
                     <a className={styles.card__link}
                        href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-installer-windows-x86_64.msi">
-                        Windows .msi installer (x86_64)&nbsp;&nbsp;&gt;
+                        &gt;&nbsp;&nbsp;Windows .msi installer (x86_64)
                     </a>
                     <a className={styles.card__link}
                        href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-installer-linux-x86_64.deb">
-                        Linux .deb installer (x86_64)&nbsp;&nbsp;&gt;
+                        &gt;&nbsp;&nbsp;Linux .deb installer (x86_64)
                     </a>
                     <a className={styles.card__link}
                        href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-installer-linux-x86_64.rpm">
-                        Linux .rpm installer (x86_64)&nbsp;&nbsp;&gt;
+                        &gt;&nbsp;&nbsp;Linux .rpm installer (x86_64)
                     </a>
                     <a className={styles.card__link}
                        href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-installer-macos-x86_64.pkg">
-                        MacOS .pkg installer (x86_64)&nbsp;&nbsp;&gt;
+                        &gt;&nbsp;&nbsp;MacOS .pkg installer (x86_64)
                     </a>
                 </ActionCard>
 
                 <ActionCard
-                    title="Portable Installations"
+                    title="Portable Installation"
                     description="Portable archives can be unpacked anywhere you like but require some extra work such as environment variable setup.
 There is also no autoupdate functionality included."
                     icon={
@@ -45,15 +45,19 @@ There is also no autoupdate functionality included."
                 >
                     <a className={styles.card__link}
                        href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-portable-windows-x86_64.zip">
-                        Windows .zip archive (x86_64)&nbsp;&nbsp;&gt;
+                        &gt;&nbsp;&nbsp;Windows .zip archive (x86_64)
                     </a>
                     <a className={styles.card__link}
                        href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-portable-linux-x86_64.tar.gz">
-                        Linux .tar.gz archive (x86_64)&nbsp;&nbsp;&gt;
+                        &gt;&nbsp;&nbsp;Linux .tar.gz archive (x86_64)
                     </a>
                     <a className={styles.card__link}
                        href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-portable-macos-x86_64.dmg">
-                        MacOS .dmg archive (x86_64)&nbsp;&nbsp;&gt;
+                        &gt;&nbsp;&nbsp;MacOS .dmg archive (x86_64)
+                    </a>
+                    <a
+                       href="https://docs.xpipe.io/en/latest/guide/installation.html#environment-variables">
+                        Portable setup instructions
                     </a>
                 </ActionCard>
 

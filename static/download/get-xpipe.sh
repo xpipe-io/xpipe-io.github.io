@@ -101,7 +101,7 @@ uninstall() {
       fi
       ;;
     Darwin)
-      sudo pkg ...
+      sudo /Applications/X-Pipe.app/Contents/Resources/scripts/uninstall.sh
       ;;
     *)
       exit 1
@@ -121,7 +121,7 @@ install() {
       fi
       ;;
     Darwin)
-      sudo pkg ...
+      sudo installer -verboseR -allowUntrusted -pkg "$file" -target /
       ;;
     *)
       exit 1
