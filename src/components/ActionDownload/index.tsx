@@ -15,7 +15,7 @@ export const ActionDownload = () => (
                     }
                     title="Installer"
                     description="Installers handle the setup out of the box.
-With the installer you can also make use of the optional autoupdate functionality."
+With installers you can also make use of the optional auto-update functionality."
                 >
                     <a className={styles.card__link}
                        href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-installer-windows-x86_64.msi">
@@ -54,10 +54,6 @@ There is also no autoupdate functionality included."
                     <a className={styles.card__link}
                        href="https://github.com/xpipe-io/xpipe-app/releases/latest/download/xpipe-portable-macos-x86_64.dmg">
                         &gt;&nbsp;&nbsp;MacOS .dmg archive (x86_64)
-                    </a>
-                    <a
-                       href="https://docs.xpipe.io/en/latest/guide/installation.html#environment-variables">
-                        Portable setup instructions
                     </a>
                 </ActionCard>
 

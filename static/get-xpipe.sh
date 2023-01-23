@@ -62,27 +62,16 @@ bold() {
 }
 
 # returns the os name to be used in the packaged release
-parse_os_info() {
+parse_os_name() {
   local uname_str="$1"
   local arch="$(uname -m)"
 
   case "$uname_str" in
     Linux)
-      if [ "$arch" == "x86_64" ]; then
-        echo "linux"
-      else
-        error "Releases for non x64 architectures are not currently supported."
-        return 1
-      fi
+      echo "linux"
       ;;
     Darwin)
-      if [ "$(uname -m)" == "arm64" ]; then
-        error "Releases for non x64 architectures are not currently supported."
-        return 1
-        # echo "macos-aarch64"
-      else
-        echo "macos"
-      fi
+      echo "macos"
       ;;
     *)
       return 1
@@ -132,30 +121,14 @@ launch() {
   xpipe open
 }
 
-parse_os_pretty() {
-  local uname_str="$1"
-
-  case "$uname_str" in
-    Linux)
-      echo "Linux"
-      ;;
-    Darwin)
-      echo "macOS"
-      ;;
-    *)
-      echo "$uname_str"
-  esac
-}
-
 download_release() {
   local uname_str="$(uname -s)"
   local os_info
-  os_info="$(parse_os_info "$uname_str")"
+  os_info="$(parse_os_name "$uname_str")"
   if [ "$?" != 0 ]; then
     error "The current operating system ($uname_str) does not appear to be supported."
     return 1
   fi
-  local pretty_os_name="$(parse_os_pretty "$uname_str")"
 
   # store the downloaded archive in a temporary directory
   local download_dir="$(mktemp -d)"

@@ -1,0 +1,67 @@
+---
+slug: mdx-blog-post
+title: MDX Blog Post
+authors: [crschnick]
+tags: [docusaurus]
+---
+
+Blog posts support [Docusaurus Markdown features](https://docusaurus.io/docs/markdown-features), such as [MDX](https://mdxjs.com/).
+
+## A new approach to handling remote connections
+
+The current work flow regarding remote connections is pretty established.
+You just use cline that works for the connection protocol that you want to use.
+For example, you would use an SSH client to connect via SSH,
+or an FTP client to connect via a protocol such as FTP, SFTP, SCP.
+This approach works fine, but it has several problems:
+- You are forced to use the software that is compatible with the use protocols
+  (For example, you like the user experience of tool A but are forced to use tool B as the protocol is not supported)
+- Any kind of proxy involved in the connection must support to protocol as well
+  (For example, you can use integrate proxy an SSH connection over another SSH connection)
+
+Most of these limitations don't play out as bad for the average user in practice
+as many popular tools have found ways to circumvent them:
+
+However, these problems still hinder the idea of uniform connection method.
+Ideas like `just support ALL the protocols` are simply not feasible.
+So how can we improve on the current landscape of tools without having to implements support for way too many different protocols?
+
+### Shell-based connections
+
+There are many challenges to be considered:
+- Shells in general are very heterogeneous, especially between operating systems.
+  While the differences between `sh`, `bash`, and `zsh` are marginal, shells like `cmd` and `bash` behave in wildly different ways.
+- The available commands and programs wildly differ between different operating systems and shells with built-ins.
+  We need to work with the least common denominator as we don't want to install additional packages.
+- How to handle permissions, elevation, and passwords? Many shells and programs require at least at pty to be present to allow for a password prompt.
+  How can we use these commands and fill passwords without a pty?
+- As the processes are running on remote systems, it is way harder to detect the current state of a process:
+  - Is the process still running?
+  - What exactly is the state of stdin, stdout, stderr? Where exactly does the output of the first program end and the second one start?
+  - How to handle errors? Like connection errors, command syntax errors, program execution errors.
+- Can we also make these shall connections instantly available to the user?
+  I.e. is it possible to open this shell connection in a new terminal window without requiring any explicit user input like passwords?
+- Is it possible to chain/nest shell connections and introduce other shell connections as proxies into the process?
+
+Well the good news is that all of these challenges have been successfully conquered!
+Of course, the implementation is still a little bit rough around the edges, and it is planned to support more types of shell connections out of the box.
+X-Pipe is in an early alpha after all.
+But the current implementation already achieved the goal providing a new way to create and use remote connections.
+
+## Working with data on the higher level
+
+
+
+
+
+:::tip
+
+Use the power of React to create interactive blog posts.
+
+```js
+<button onClick={() => alert('button clicked!')}>Click me!</button>
+```
+
+<button onClick={() => alert('button clicked!')}>Click me!</button>
+
+:::

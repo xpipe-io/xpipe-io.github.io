@@ -65,6 +65,7 @@ const config = {
             label: 'Docs',
             position: 'left',
           },
+          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/xpipe-io',
             label: 'GitHub',
@@ -99,10 +100,10 @@ const config = {
                 label: 'Docs',
                 to: 'https://docs.xpipe.io',
               },
-              // {
-              //   label: 'Blog',
-              //   to: '/blog',
-              // }
+              {
+                label: 'Blog',
+                to: '/blog',
+              }
             ],
           },
           {
