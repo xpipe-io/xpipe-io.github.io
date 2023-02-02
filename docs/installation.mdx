@@ -1,0 +1,168 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Installation
+
+There are three different ways of installing X-Pipe:
+
+* [Installers](#installers)
+* [Portable](#portable-installation)
+
+You are able to essentially get the same feature set regardless which way you choose.
+There are a few small exceptions, such as desktop environment integrations for your
+operating system that are only available with installers, however these features are not crucial to X-Pipe.
+
+The possible reasons why you would want to look out for a certain way of installing X-Pipe are:
+
+* intended usage
+* possible system permission issues
+* personal preferences
+
+## Installers
+
+Installers are the easiest way to get started with X-Pipe.
+Prebuilt installers for every operating system can be found here:
+
+#### [X-Pipe Releases on GitHub](https://github.com/xpipe-io/xpipe-app/releases/latest)
+
+The installers handle all the setup and X-Pipe will work right out of the box.
+By using the installer distribution, you can also make use of the autoupdate functionality,
+which you can of course also disable if wanted.
+
+## Portable Installation
+
+Alternatively, you can also make use of the portable X-Pipe distributions.
+These are just archives that you can unpack anywhere you like without having to run an installer.
+
+In contrast to the installers, a manual portable installation requires some extra work and also lacks several features
+such as shortcuts, other desktop environment integrations, and automatic environment variable setup.
+There is also no autoupdate functionality included in the portable distribution,
+which means that you have to manually download new releases if you want to use them.
+
+You can find the latest portable releases at the same location as the installers:
+#### [X-Pipe Releases on GitHub](https://github.com/xpipe-io/xpipe-app/releases/latest)
+
+### Environment Variables
+
+In order to get the most out of X-Pipe, it is strongly recommended to set the available environment variables.
+The installer takes care of that automatically for you.
+There are however several additional steps required to properly use a portable X-Pipe installation.
+
+First, the ``XPIPE_HOME`` environment variable has to be set so that it points the your portable location.
+If this variable is not set, the CLI and APIs will not be able to start and interact with X-Pipe.
+Furthermore, if you want to use the ``xpipe`` CLI executable from the command-line, its directory
+has to be added to your ``PATH`` variable as well.
+You can do this as follows:
+
+<Tabs groupId="operating-systems">
+<TabItem value="windows" label="Windows" default>
+
+You can use the [setx](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/setx) command as follows:
+
+```
+setx XPIPE_HOME "<xpipe location>"
+setx PATH "%XPIPE_HOME%\cli\bin;%PATH%"
+```
+
+Alternatively, you can also use the graphical user interface
+in the Windows control panel to set environment variables.
+
+</TabItem>
+<TabItem value="linux" label="Linux">
+
+Add the following commands to your respective dotfiles on your system:
+
+```
+export XPIPE_HOME=<xpipe location>
+export PATH=$XPIPE_HOME/cli/bin:$PATH
+```
+
+Don't forget to reload your configuration with `source <dotfile>`.
+
+</TabItem>
+<TabItem value="macos" label="MacOS">
+
+Add the following commands to your respective dotfiles on your system:
+
+```
+export XPIPE_HOME=<xpipe location>
+export PATH=$XPIPE_HOME/Contents/MacOS/:$PATH
+```
+
+In most cases, the installation location used above would be `/Applications/X-Pipe.app`.
+Also don't forget to reload your configuration with `source <dotfile>`.
+</TabItem>
+</Tabs>
+
+### Manpages
+
+To be able to access the man pages of the X-Pipe CLI with `man <xpipe command>`,
+you also have to register the manpage files as follows:
+<Tabs groupId="operating-systems">
+<TabItem value="linux" label="Linux">
+
+```
+cp "$XPIPE_HOME/cli/man/*" /usr/share/man/man1/
+mandb
+```
+
+</TabItem>
+<TabItem value="macos" label="MacOS">
+
+```
+cp "$XPIPE_HOME/Resources/cli/man/*" /usr/share/man/man1/
+mandb
+```
+
+</TabItem>
+</Tabs>
+
+### Bash Autocompletion
+
+To be able to use the tab completion for the X-Pipe CLI commands, you have to do as follows:
+
+<Tabs groupId="operating-systems">
+<TabItem value="linux" label="Linux">
+
+```
+ln -s "$XPIPE_HOME/cli/xpipe_completion" /etc/bash_completion.d/xpipe
+```
+
+</TabItem>
+<TabItem value="macos" label="MacOS">
+
+```
+ln -s "$XPIPE_HOME/Resources/cli/xpipe_completion" /etc/bash_completion.d/xpipe
+```
+
+</TabItem>
+</Tabs>
+
+You need to restart your shell to make use of the tap completion afterwards.
+
+## Components
+
+You can access the full functionality from the command-line or
+the X-Pipe Desktop application, which features a full-fledged GUI.
+However, the different ways to use X-Pipe don't stop there.
+X-Pipe comes with APIs for many programming languages, hopefully also your favorite programming language.
+It also includes support through addons and integrations for select third-party applications.
+The X-Pipe project consists out of several components that work together:
+
+##### X-Pipe Daemon
+The X-Pipe daemon is the core component that handles all operations in the background.
+
+##### X-Pipe Desktop
+The X-Pipe Desktop application provides a GUI with which you can access the full X-Pipe functionality.
+
+##### Command-line tools
+To access most of the X-Pipe functionality from the command-line, there exists the `xpipe` / `xpipe.exe` CLI executable,
+which is included in all X-Pipe distributions.
+
+##### X-Pipe APIs
+The X-Pipe APIs that are available for various programming languages allow you to interact with X-Pipe in your program or script.
+These APIs have to be added to your application manually, they do not ship with your X-Pipe installation.
+
+##### Application integrations
+There also exist special integrations for select third-party applications.
+These integrations also have to be installed manually, they do not ship with your X-Pipe installation.
