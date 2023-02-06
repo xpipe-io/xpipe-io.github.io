@@ -141,6 +141,9 @@ check_architecture() {
     x86_64)
       return 0
       ;;
+    amd64)
+      return 0
+      ;;
     arm64)
       if [ "$(uname -s)" = "Darwin" ]; then
         return 0
