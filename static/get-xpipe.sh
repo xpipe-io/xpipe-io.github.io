@@ -70,6 +70,9 @@ parse_os_name() {
     Linux)
       echo "linux"
       ;;
+    FreeBSD)
+      echo "linux"
+      ;;
     Darwin)
       echo "macos"
       ;;
