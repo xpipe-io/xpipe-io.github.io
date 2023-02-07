@@ -1,4 +1,4 @@
-# Manpages
+# xpipe
 
 <h2 id="_name">Name</h2>
 <div class="sectionbody">
