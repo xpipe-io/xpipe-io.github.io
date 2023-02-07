@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 release_url() {
-  echo "https://github.com/xpipe-io/xpipe-app/releases/latest/download"
+  echo "https://github.com/xpipe-io/xpipe/releases/latest/download"
 }
 
 get_file_ending() {

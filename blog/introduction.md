@@ -25,7 +25,7 @@ X-Pipe is designed to be an open platform and is open source on [GitHub](https:/
 The platform is designed to be extensible, allowing anyone
 to implement custom functionality through custom extensions with the help of an exhaustive API.
 
-## Remote Connections
+## Remote Connections at the forefront
 
 The current workflow regarding remote connections is pretty established.
 You just use a client that supports the connection protocol that you want to use.
@@ -41,8 +41,9 @@ This approach works fine, but it has several problems:
   You can of course login into a remote shell via tool/protocol A and from there
   manually login into another system via tool/protocol B, but that is cumbersome.
 - There don't really exist proper connection types to nested local machines, such as
-  Docker containers, Windows Subsystem for Linux instances, and virtual machines.
-  Connections to those are not supported by most tools out of the box,
+  Docker containers, Windows Subsystem for Linux instances, and virtual machines
+  running on arbitrary hosts.
+  Connections to those local machines are not supported by most tools out of the box,
   especially if these local machines are not exposed to the public itself. 
   Usually you're only able to connect to their parent machine from the outside.
 - Most tools don't support programmatically interacting with the remote machine through remote shells.
@@ -69,10 +70,10 @@ first remote shell, then into another one from there, and so on ...
 For this approach to work out, there are many challenges to be considered:
 
 - Shells in general are very heterogeneous, especially between operating systems.
-  While the differences between `sh`, `bash`, and `zsh` are marginal, shells like `cmd` and `bash` behave in wildly different ways.
+  While the differences between `sh` and `bash` are marginal, shells like `cmd` and `bash` behave in wildly different ways.
   We also need a reliable way to detect which shell we are currently in first.
 - The available commands and programs wildly differ between different operating systems and shells with built-ins.
-  We need to work with the least common denominator as we don't want to install additional packages.
+  We need to work with the least common denominator as we don't want to install any additional packages or applications.
   Especially bare docker containers are a challenge here.
 - How to handle permissions, elevation, and passwords? Many shells and programs require at least at pty to be present to allow for a password prompt.
   X-Pipe must be able to fill passwords without any ptys or pseudo-consoles.
@@ -90,6 +91,15 @@ is still a little bit rough around the edges,
 and it is planned to support more types of shell connections out of the box.
 X-Pipe is in an early alpha after all.
 But the current implementation already achieved the goal of supporting a wide range of remote connections.
+
+As an experienced SSH user, you might ask whether X-Pipe is able to support
+using your complex SSH configuration that you normally use.
+Things like tunnels, configuration files, additional options, and more.
+The answer is yes, you are able to utilize any command-line command
+to establish remote shell connections.
+Of course, you're still able to use the more user-friendly
+built-in SSH connection wizard within X-Pipe as well.
+
 You can try out the implementation in the X-Pipe connection explorer:
 
 ![connections](/img/stores.png)
@@ -103,6 +113,7 @@ With it, you can automatically open any shell connection in your favorite termin
 skipping any required login process, such as password prompts, as it is automatically handled by X-Pipe.
 Most popular terminals are supported out of the box,
 but you are also able to add any custom terminal open command by yourself.
+Furthermore, you are also able to create desktop shortcuts that can launch the connection in a terminal.
 
 #### Proxy via relays
 

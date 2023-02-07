@@ -105,30 +105,6 @@ action available for any shell store, no manual setup is required. Once
 X-Pipe is installed on the remote machine, you can use it as a proxy for
 your database connections.
 
-## Commands
-
-With the help of command store, you are able to execute a command and
-interact with its input and output. Of course, you can make full use of
-your existing shell connections, i.e. executing a command in a certain host
-shell.
-
-Furthermore, you can also choose to use a fixed shell type instead of
-the default one. This will force the command to be executed using the
-specified shell type. This is useful in case you don\'t know or don\'t
-want to rely on the used default shell type on a machine. Otherwise,
-when the default option is used, the command is always executed in the
-selected host shell.
-
-With command stores, you have to set the data flow property to specify how the command inputs and outputs
-should be treated. This will become important later on when you want to
-use this command store as the basis of data sources. Essentially you
-have to specify whether you command
-
--   only takes input
--   only produces output
--   takes input and then produces output that is based on the input,
-    i.e. it transforms the input
-
 ### Opening commands in a terminal
 
 Similar to shell stores, you can also execute a command in your
