@@ -90,7 +90,7 @@ effectively performing a filter operation that drops all rows except the ones re
 While this doesn't seem that impressive as you could easily realize the same with an SQL query,
 you can perform any arbitrary filter command, e.g. your
 own scripts and also perform the filter operation using any table data format you like.
-In this example we used CSV, but if you scripts and programs work on different formats,
+In this example we used CSV, but if your scripts and programs work on different formats,
 this can easily be realized by choosing a different format when writing to the drain.
 
 ### Adjusting the Encoding

@@ -61,7 +61,7 @@ const config = {
         items: [
           {to: '/download', label: 'Download', position: 'left'},
           {
-            href: 'https://docs.xpipe.io',
+            href: '/docs',
             label: 'Docs',
             position: 'left',
           },
@@ -98,7 +98,7 @@ const config = {
             items: [
               {
                 label: 'Docs',
-                to: 'https://docs.xpipe.io',
+                to: '/docs',
               },
               {
                 label: 'Blog',
