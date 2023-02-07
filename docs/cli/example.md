@@ -1,6 +1,4 @@
-=============
-Example Usage
-=============
+# Example Usage
 
 Let's start with a simple example file in the CSV format:
 
@@ -10,8 +8,7 @@ Let's start with a simple example file in the CSV format:
 To properly understand this example case, you should know
 what a `data source </guide/sources.html>`_ is.
 
-Adding Data Sources
-===================
+## Adding Data Sources
 
 One of the most common commands that you will need when working with files is the ``xpipe source add`` subcommand.
 Essentially, the ``source add`` command takes a data store, quickly analyzes the type of it,
@@ -49,8 +46,7 @@ change some values interactively, by using the ``-c/--confirm`` switch:
 You can confirm the preselected configuration parameters by skipping them with enter.
 To change one, enter another value instead and then press enter.
 
-Querying Information
-====================
+## Querying Information
 
 To quickly check on whether the data source you added contains the right data,
 you can use the ``xpipe source peek`` command to query some contents of a data source:
@@ -92,8 +88,7 @@ you can use the ``xpipe source info`` command:
       Quote=double-quote
       Delimiter=semicolon
 
-Editing Data Sources
-====================
+## Editing Data Sources
 
 In case the result of ``xpipe source peek`` or the information returned by ``xpipe source info`` does not look as expected,
 either because the automatic detection failed or you initially set a wrong configuration parameter,
@@ -111,8 +106,7 @@ you can still change them later with the ``xpipe source edit`` command:
     Quote: [double-quote] >
     Successfully applied the changes
 
-Outputting Data Sources
-=======================
+## Outputting Data Sources
 
 TODO
 
@@ -150,8 +144,7 @@ Notice that the ``add`` command was executed without any ``--id`` parameter.
 This will create an anonymous and temporary data source, which is appropriate for this situation as
 we don't want to create a permanent data source for the file to be appended.
 
-Converting Data Sources
------------------------
+### Converting Data Sources
 
 Moreover, it is also possible to change the data source type itself with the ``xpipe source convert`` command.
 For example, if we want to use the example file `userdata.csv` as a pure text file instead
@@ -185,8 +178,7 @@ Checking with ``xpipe source info`` confirms that the conversion worked as inten
 
 Alternatively, you can also explicitly specify the exact data source type instead of just the category.
 
-Removing Data Sources
-=====================
+## Removing Data Sources
 
 After you are done working with a data source, it is a good idea to cleanup
 to prevent bloating of your data source storage and keep it organized.

@@ -1,3 +1,7 @@
+# Comparison
+
+This page is intended to give you an overview over what makes
+X-Pipe different from other existing similar tools.
 
 ### vs DBeaver
 

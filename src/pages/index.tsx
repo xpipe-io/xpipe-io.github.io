@@ -9,8 +9,8 @@ export default function Home(): JSX.Element {
     const {siteConfig} = useDocusaurusContext();
     return (
         <Layout
-            title={`Hello from ${siteConfig.title}`}
-            description="Build performant, native and cross-platform desktop applications with Vue 🚀">
+            title={`X-Pipe`}
+            description="Next level remote data workflows for everyone">
             <header className={classnames('hero hero--primary', styles.heroBanner)}>
                 <div className="container">
                     <img src="/img/logo_large.svg"/>
@@ -63,14 +63,16 @@ export default function Home(): JSX.Element {
                             </ul>
                         </div>
                         <div className={classnames("col col--6", styles.imgColumn)}>
-                            <img src="/img/stores.png" className={styles.demoImg}/>
+                            <video width="600" height="338" controls>
+                                <source src="/demo.mp4" type="video/mp4" />
+                            </video>
                         </div>
                     </div>
                 </section>
                 <section className={styles.description}>
                     <div className={classnames("row", styles.descriptionRow)}>
                         <div className={classnames("col col--6", styles.imgColumn)}>
-                            <img src="/img/stores.png" className={styles.demoImg}/>
+                            <img src="/img/sources.png" className={styles.demoImg}/>
                         </div>
                         <div className="col col--6">
                             <h3>High Level Data Explorer</h3>

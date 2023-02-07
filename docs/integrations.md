@@ -5,7 +5,7 @@ and also to integrate well with other existing tools and platforms.
 On this page you can find an overview of what is currently supported.
 
 If you would like to see something to be supported in the future,
-feel free to open [ticket](s).
+feel free to open [ticket](https://github.com/xpipe-io/xpipe/issues).
 
 ### Operating systems
 
@@ -22,7 +22,7 @@ X-Pipe also supports installation in headless environments, such as servers.
 
 ### Terminals
 
-The [shell connection feature](a) supports opening a terminal application for a specific shell connection.
+The [shell connection feature](/connections/shell-connections) supports opening a terminal application for a specific shell connection.
 You are free to choose which terminal application is used here in the settings menu.
 The following terminals come without of the box support:
 
@@ -43,7 +43,7 @@ The following terminals come without of the box support:
 
 Note that X-Pipe supports setting a custom terminal command in case your favorite terminal is not listed here.
 To improve the user experience however, out of the box support is still preferred, so
-you are free to open [ticket](s) to request support for your terminal application. 
+you are free to open [ticket](https://github.com/xpipe-io/xpipe/issues) to request support for your terminal application. 
 
 ### Text Editors
 
@@ -71,7 +71,7 @@ The following text editors are currently supported out of the box:
 
 Note that X-Pipe supports setting a custom text editor command in case your favorite editor is not listed here.
 To improve the user experience however, out of the box support is still preferred, so
-you are free to open [ticket](s) to request support for your editor application. 
+you are free to open [ticket](https://github.com/xpipe-io/xpipe/issues) to request support for your editor application. 
 
 ### Shell connections
 

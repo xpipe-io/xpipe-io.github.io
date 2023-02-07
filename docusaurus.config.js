@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'X-Pipe',
-  tagline: 'The modern way to work with data',
+  tagline: 'Next level remote data workflows for everyone',
   url: 'https://xpipe.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
