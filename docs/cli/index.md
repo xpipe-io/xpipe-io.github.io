@@ -10,7 +10,7 @@ all environment variable related setup to access the CLI executable from the com
 You can easily verify this by typing ``xpipe --help`` in a terminal.
 
 In case the ``xpipe`` command can not be found or you are using a portable distribution, you can
-look up the [environment variables](/installation#environment-variables)
+look up the [environment variables](../installation#environment-variables)
 section in the installation manual to add the X-Pipe CLI to your path variable.
 
 ## Getting Started
@@ -22,5 +22,5 @@ For a full reference, you can consult:
   ``xpipe help <subcommand>`` for detailed information about a certain subcommand.
 * Manpages, which you can access with ``man xpipe`` on Linux and macOS systems
   when they are installed using the installer distribution
-* The online CLI manpages, which can be found [here](man)
+* The online CLI manpages, which can be found [here](man/xpipe)
 

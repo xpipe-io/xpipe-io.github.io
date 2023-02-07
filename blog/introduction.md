@@ -91,18 +91,19 @@ is still a little bit rough around the edges,
 and it is planned to support more types of shell connections out of the box.
 X-Pipe is in an early alpha after all.
 But the current implementation already achieved the goal of supporting a wide range of remote connections.
+You can try out the implementation in the X-Pipe connection explorer:
+
+![connections](/img/stores.png)
+
+#### Works for everything
 
 As an experienced SSH user, you might ask whether X-Pipe is able to support
 using your complex SSH configuration that you normally use.
 Things like tunnels, configuration files, additional options, and more.
-The answer is yes, you are able to utilize any command-line command
+The answer is yes, you are able to utilize any command-line ssh command
 to establish remote shell connections.
 Of course, you're still able to use the more user-friendly
-built-in SSH connection wizard within X-Pipe as well.
-
-You can try out the implementation in the X-Pipe connection explorer:
-
-![connections](/img/stores.png)
+built-in SSH connection wizard within X-Pipe as well for more simple connections.
 
 #### Instant launch
 

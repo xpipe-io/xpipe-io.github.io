@@ -22,7 +22,7 @@ X-Pipe also supports installation in headless environments, such as servers.
 
 ### Terminals
 
-The [shell connection feature](/connections/shell-connections) supports opening a terminal application for a specific shell connection.
+The [shell connection feature](connections/shell-connections) supports opening a terminal application for a specific shell connection.
 You are free to choose which terminal application is used here in the settings menu.
 The following terminals come without of the box support:
 
