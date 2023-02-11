@@ -32,6 +32,10 @@
 <dd>
 <p>Opens the specified inputs with the X-Pipe daemon</p>
 </dd>
+<dt class="hdlist1"><a href="xpipe-launch"><strong>launch</strong></a></dt>
+<dd>
+<p>Launches the specified connection</p>
+</dd>
 <dt class="hdlist1"><a href="xpipe-store"><strong>store</strong>, <strong>connection</strong>, <strong>str</strong>, <strong>con</strong></a></dt>
 <dd>
 <p>Commands for data store handling</p>
