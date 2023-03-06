@@ -95,3 +95,20 @@ You can also manually select the data source to which the anonymous data source 
 
     xpipe source select <id>
 
+
+### Other proxy usages
+
+Tt is also possible to use shell connections
+as proxies for other kinds of connections as well. One example are database stores. The
+problem with databases is that the protocols cannot be easily proxied
+and every database solution has a different approach to proxies or
+doesn\'t support it at all.
+
+As a solution, you can use other X-Pipe installations on other machines
+as proxies. Essentially all operations are performed by the remote
+X-Pipe installation and the results are communicated to your local
+installation through the used shell connection. X-Pipe can easily be
+installed or updated on a remote machine through the `Install Relay`
+action available for any shell store, no manual setup is required. Once
+X-Pipe is installed on the remote machine, you can use it as a proxy for
+your database connections.

@@ -10,13 +10,13 @@ feel free to open [ticket](https://github.com/xpipe-io/xpipe/issues).
 ### Operating systems
 
 Supported operating systems:
-- Windows: Windows 7 and later
-- Linux-based operating systems: Obviously you can't test every single distro, but they should all work in principle
-- macOS: Big Sur and later
+- **Windows**: Windows 7 and later
+- **Linux-based operating systems**: Obviously you can't test every single distro, but they should all work in principle
+- **macOS**: Big Sur and later
 
 Supported architectures:
-- x86_64: Supported for all operating systems
-- arm64: On macOS, the x86_64 version also works on ARM-based systems
+- **x86_64**: Supported for all operating systems
+- **arm64**: On macOS, the x86_64 version also works on ARM-based systems
 
 X-Pipe also supports installation in headless environments, such as servers.
 
@@ -24,7 +24,7 @@ X-Pipe also supports installation in headless environments, such as servers.
 
 The [shell connection feature](connections/shell-connections) supports opening a terminal application for a specific shell connection.
 You are free to choose which terminal application is used here in the settings menu.
-The following terminals come without of the box support:
+The following terminals come with out of the box support:
 
 ##### Windows
 - cmd
@@ -47,7 +47,7 @@ you are free to open [ticket](https://github.com/xpipe-io/xpipe/issues) to reque
 
 ### Text Editors
 
-X-pipe supports utilizing your favorite text editor to open or edit any kind of text-based data within X-Pipe.
+X-Pipe supports utilizing your favorite text editor to open or edit any kind of text-based data within X-Pipe.
 The following text editors are currently supported out of the box:
 
 ##### Cross-platform
@@ -57,7 +57,6 @@ The following text editors are currently supported out of the box:
 ##### Windows
 - Notepad
 - Notepad++
-- Windows Terminal
 
 ##### Linux
 - Kate
@@ -94,17 +93,3 @@ X-Pipe is able to connect to a wide range of database servers.
 The following database servers are currently supported:
 - **PostgreSQL**: Password authentication
 - **Microsoft SQL Server**: Password authentication
-
-### File formats
-
-X-Pipe supports reading and writing different data formats.
-The following formats are currently supported:
-- **CSV**: All format variants are supported
-- **XML**
-- **JSON**
-- **Excel**
-- **Word**
-- **Any pure text formats**: Usual examples are `.txt` files
-
-Any platform specific differences like line endings or
-encodings are automatically handled by X-Pipe.

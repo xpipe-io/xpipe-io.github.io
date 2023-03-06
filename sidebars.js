@@ -18,7 +18,8 @@ const sidebars = {
 
   tutorialSidebar: [
     'index',
-      'installation',    {
+      //'installation',
+    {
       type: 'category',
       label: 'Connections',
       collapsible: false,
@@ -26,8 +27,8 @@ const sidebars = {
       link: {type: 'doc', id: 'connections/index'},
       items: [
         'connections/shell-connections',
-        'connections/stream-connections',
-        'connections/drains-and-sinks',
+        //'connections/stream-connections',
+        //'connections/drains-and-sinks',
       ],
     },
     {
@@ -38,8 +39,8 @@ const sidebars = {
       link: {type: 'doc', id: 'cli/index'},
       items: [
           'cli/basics',
-          'cli/example',
-          'cli/tips',
+          //'cli/example',
+          //'cli/tips',
         {
           type: 'category',
           label: 'Manpages',
@@ -53,7 +54,7 @@ const sidebars = {
       ],
     },
     'integrations',
-    'comparison'
+    //'comparison'
   ],
 };
 

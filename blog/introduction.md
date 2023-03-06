@@ -6,23 +6,19 @@ authors: [crschnick]
 
 # An Introduction to X-Pipe
 
-X-Pipe is a flexible tool written in Java for working with remote connections and their data.
+X-Pipe is a tool for working with remote connections and their data.
 The focus lies on providing:
 - An easy remote connection setup and workflow
 - Organization of all your connections in one place
-- Tool integrations to automatically launch your remote connections
+- The ability to automatically launch your remote connections
 - Data intermediation capabilities to be able to work with and transfer more than just bytes and text
-So if you are a data analyst/scientist, a system administrator, a software engineer, or generally
-just work a lot with remote connections and data, then X-Pipe is designed for you!
 
 The core idea is to utilize and integrate well with other popular tools and workflows,
 focusing on augmenting them rather than replacing them.
 X-Pipe is built around existing tools and tries to outsource tasks to them,
 such that you can always use your favorite tools to work with X-Pipe, e.g.
 text/code editors, terminals, shells, command-line tools and more.
-
-X-Pipe is designed to be an open platform and is open source on [GitHub](https://github.com/xpipe-io/xpipe).
-The platform is designed to be extensible, allowing anyone
+The X-Pipe platform is open source on [GitHub](https://github.com/xpipe-io/xpipe) and designed to be extensible, allowing anyone
 to implement custom functionality through custom extensions with the help of an exhaustive API.
 
 ## Remote Connections at the forefront
