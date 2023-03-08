@@ -28,6 +28,10 @@
 <div class="sectionbody">
 <div class="dlist">
 <dl>
+<dt class="hdlist1"><a href="xpipe-askpass"><strong>askpass</strong></a></dt>
+<dd>
+<p>Password prompt</p>
+</dd>
 <dt class="hdlist1"><a href="xpipe-open"><strong>open</strong></a></dt>
 <dd>
 <p>Opens the specified inputs with the X-Pipe daemon</p>
