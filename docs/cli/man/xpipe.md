@@ -40,14 +40,6 @@
 <dd>
 <p>Launches the specified connection</p>
 </dd>
-<dt class="hdlist1"><a href="xpipe-store"><strong>store</strong>, <strong>connection</strong>, <strong>str</strong>, <strong>con</strong></a></dt>
-<dd>
-<p>Commands for data store handling</p>
-</dd>
-<dt class="hdlist1"><a href="xpipe-source"><strong>source</strong>, <strong>src</strong></a></dt>
-<dd>
-<p>Commands for data source handling</p>
-</dd>
 <dt class="hdlist1"><a href="xpipe-daemon"><strong>daemon</strong></a></dt>
 <dd>
 <p>Commands for controlling the X-Pipe daemon</p>
