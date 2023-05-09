@@ -3,6 +3,7 @@ import ActionCard from "../ActionCard"
 import React from "react"
 // @ts-ignore
 import BashScript from "./bash-script.mdx";
+import Homebrew from "./homebrew.mdx";
 import MDXContent from '@theme/MDXContent';
 
 export const ActionDownload = () => (
@@ -56,6 +57,9 @@ There is also no autoupdate functionality included."
                         &gt;&nbsp;&nbsp;MacOS .dmg archive (x86_64)
                     </a>
                 </ActionCard>
+            </div>
+        <br/>
+            <div className="row">
 
                 <ActionCard
                     title="Installer Script"
@@ -77,6 +81,21 @@ There is also no autoupdate functionality included."
                     {/*        <PwshScript/>*/}
                     {/*    </MDXContent>*/}
                     {/*</div>*/}
+                </ActionCard>
+
+                <ActionCard
+                    title="Package Managers"
+                    description="Install X-Pipe through a package manager of your choice. All updates will also be handled by that package manager."
+                    icon={
+                        <img src="/img/package.svg" width="80px"/>
+                    }
+                >
+                    <div>
+                        <h4>Homebrew</h4>
+                        <MDXContent>
+                            <Homebrew/>
+                        </MDXContent>
+                    </div>
                 </ActionCard>
             </div>
         </div>

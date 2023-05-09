@@ -24,11 +24,12 @@ X-Pipe also supports installation in headless environments, such as servers.
 
 The [shell connection feature](connections/shell-connections) supports opening a terminal application for a specific shell connection.
 You are free to choose which terminal application is used here in the settings menu.
-The following terminals come with out of the box support:
+The following terminals come with out-of-the-box support:
 
-##### Windows
+##### Windows (Terminal window only, independent of underlying shell)
 - cmd
 - PowerShell
+- PowerShell Core
 - Windows Terminal
 
 ##### Linux
@@ -86,6 +87,12 @@ The following ways of establishing a remote shell connection are currently suppo
 Furthermore, X-Pipe allows for the usage of a custom command-line command to open a shell connection.
 In case your use connection method is not listed here, there is still
 the possibility of it being able to be used by using a custom command.
+
+There are two basic requirements for a remote system.
+First, it has to have a shell installed.
+This can sometimes be not the case for bare docker containers they don't even have `sh` installed.
+Second, the file system has to be writable as X-Pipe will
+create a few temporary files they're a required in order for everything to function correctly.
 
 ### Database servers
 
