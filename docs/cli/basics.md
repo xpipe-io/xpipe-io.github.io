@@ -33,37 +33,58 @@ There are several commands to achieve this:
 
 Note that for everyday work these commands are not needed.
 
-## Working with connections
+[//]: # (## Working with connections)
 
-The following commands should be most relevant to you:
+[//]: # ()
+[//]: # (The following commands should be most relevant to you:)
 
--  [xpipe con add](man/xpipe-store-add):
-   Adds a new data connection.
-   This can be done both interactively and non-interactively.
+[//]: # ()
+[//]: # (-  [xpipe con add]&#40;man/xpipe-store-add&#41;:)
 
--  [xpipe con edit](man/xpipe-store-edit):
-   Edit the configuration of an existing data connection.
+[//]: # (   Adds a new data connection.)
 
--  [xpipe con mv](man/xpipe-store-mv):
-   Renames a data connection.
+[//]: # (   This can be done both interactively and non-interactively.)
 
--  [xpipe con rm](man/xpipe-store-rm):
-   Removes a data connection.
+[//]: # ()
+[//]: # (-  [xpipe con edit]&#40;man/xpipe-store-edit&#41;:)
 
-## Working With Data Sources
+[//]: # (   Edit the configuration of an existing data connection.)
 
-The following commands should be most relevant to you:
+[//]: # ()
+[//]: # (-  [xpipe con mv]&#40;man/xpipe-store-mv&#41;:)
 
--  [xpipe source add](man/xpipe-source-add):
-   Adds a new data source.
-   This can be done both interactively and non-interactively.
+[//]: # (   Renames a data connection.)
 
--  [xpipe source edit](man/xpipe-source-edit):
-   Edit the configuration of an existing data source.
+[//]: # ()
+[//]: # (-  [xpipe con rm]&#40;man/xpipe-store-rm&#41;:)
 
--  [xpipe source mv](man/xpipe-source-mv):
-   Renames a data source.
+[//]: # (   Removes a data connection.)
 
--  [xpipe source rm](man/xpipe-source-rm):
-   Removes a data source.
+[//]: # ()
+[//]: # (## Working With Data Sources)
+
+[//]: # ()
+[//]: # (The following commands should be most relevant to you:)
+
+[//]: # ()
+[//]: # (-  [xpipe source add]&#40;man/xpipe-source-add&#41;:)
+
+[//]: # (   Adds a new data source.)
+
+[//]: # (   This can be done both interactively and non-interactively.)
+
+[//]: # ()
+[//]: # (-  [xpipe source edit]&#40;man/xpipe-source-edit&#41;:)
+
+[//]: # (   Edit the configuration of an existing data source.)
+
+[//]: # ()
+[//]: # (-  [xpipe source mv]&#40;man/xpipe-source-mv&#41;:)
+
+[//]: # (   Renames a data source.)
+
+[//]: # ()
+[//]: # (-  [xpipe source rm]&#40;man/xpipe-source-rm&#41;:)
+
+[//]: # (   Removes a data source.)
 
