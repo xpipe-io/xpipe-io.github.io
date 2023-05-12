@@ -15,8 +15,7 @@ export const ActionDownload = () => (
                         <img width="80px" src="/img/install-setup-product-icon.svg"/>
                     }
                     title="Installer"
-                    description="Installers handle the setup out of the box.
-With installers you can also make use of the optional auto-update functionality."
+                    description="Installers handle the setup out of the box and come with an optional auto-update functionality."
                 >
                     <a className={styles.card__link}
                        href="https://github.com/xpipe-io/xpipe/releases/latest/download/xpipe-installer-windows-x86_64.msi">
@@ -34,12 +33,24 @@ With installers you can also make use of the optional auto-update functionality.
                        href="https://github.com/xpipe-io/xpipe/releases/latest/download/xpipe-installer-macos-x86_64.pkg">
                         &gt;&nbsp;&nbsp;MacOS .pkg installer (x86_64)
                     </a>
+                    Download and install X-Pipe automatically with the following script:
+                    <div>
+                        <h5>Bash (Linux / MacOS)</h5>
+                        <MDXContent>
+                            <BashScript/>
+                        </MDXContent>
+                    </div>
+                    {/*<div>*/}
+                    {/*    <h5>PowerShell (Windows)</h5>*/}
+                    {/*    <MDXContent>*/}
+                    {/*        <PwshScript/>*/}
+                    {/*    </MDXContent>*/}
+                    {/*</div>*/}
                 </ActionCard>
 
                 <ActionCard
                     title="Portable Installation"
-                    description="Portable archives can be unpacked anywhere you like but require some extra work such as environment variable setup.
-There is also no autoupdate functionality included."
+                    description="Portable archives don't require an installation, can be unpacked anywhere you like, and come with no autoupdate functionality."
                     icon={
                         <img src="/img/portable.svg" width="80px"/>
                     }
@@ -57,32 +68,6 @@ There is also no autoupdate functionality included."
                         &gt;&nbsp;&nbsp;MacOS .dmg archive (x86_64)
                     </a>
                 </ActionCard>
-            </div>
-        <br/>
-            <div className="row">
-
-                <ActionCard
-                    title="Installer Script"
-                    description="Install X-Pipe by pasting the applicable installation command into your terminal.
-            This will perform the full set up similarly to the downloadable installers."
-                    icon={
-                        <img src="/img/script.svg" width="80px"/>
-                    }
-                >
-                    <div>
-                        <h5>Bash (Linux / MacOS)</h5>
-                        <MDXContent>
-                            <BashScript/>
-                        </MDXContent>
-                    </div>
-                    {/*<div>*/}
-                    {/*    <h5>PowerShell (Windows)</h5>*/}
-                    {/*    <MDXContent>*/}
-                    {/*        <PwshScript/>*/}
-                    {/*    </MDXContent>*/}
-                    {/*</div>*/}
-                </ActionCard>
-
                 <ActionCard
                     title="Package Managers"
                     description="Install X-Pipe through a package manager of your choice. All updates will also be handled by that package manager."
