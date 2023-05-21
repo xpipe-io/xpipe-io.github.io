@@ -16,7 +16,7 @@
 <h2 id="_description">Description</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Reports version information of the X-Pipe installation.</p>
+<p>Reports version information of the XPipe installation.</p>
 </div>
 </div>
 </div>
@@ -27,7 +27,7 @@
 <dl>
 <dt class="hdlist1"><strong>-e</strong>, <strong>--extended</strong></dt>
 <dd>
-<p>Query extended version information of the X-Pipe daemon. Requires the daemon to run.</p>
+<p>Query extended version information of the XPipe daemon. Requires the daemon to run.</p>
 </dd>
 </dl>
 </div>

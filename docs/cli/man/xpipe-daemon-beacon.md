@@ -2,7 +2,7 @@
 
 <h2 id="_name">Name</h2>
 <div class="sectionbody">
-<p>xpipe-daemon-beacon - Uses the input and output to simulate a X-Pipe beacon connection</p>
+<p>xpipe-daemon-beacon - Uses the input and output to simulate a XPipe beacon connection</p>
 </div>
 <div class="sect1">
 <h2 id="_synopsis">Synopsis</h2>
@@ -16,7 +16,7 @@
 <h2 id="_description">Description</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Uses the input and output to simulate a X-Pipe beacon connection</p>
+<p>Uses the input and output to simulate a XPipe beacon connection</p>
 </div>
 </div>
 </div>

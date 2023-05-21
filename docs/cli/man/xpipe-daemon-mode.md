@@ -2,7 +2,7 @@
 
 <h2 id="_name">Name</h2>
 <div class="sectionbody">
-<p>xpipe-daemon-mode - Switches the operation mode of the X-Pipe daemon</p>
+<p>xpipe-daemon-mode - Switches the operation mode of the XPipe daemon</p>
 </div>
 <div class="sect1">
 <h2 id="_synopsis">Synopsis</h2>
@@ -16,7 +16,7 @@
 <h2 id="_description">Description</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Switches the operation mode of the X-Pipe daemon</p>
+<p>Switches the operation mode of the XPipe daemon</p>
 </div>
 </div>
 </div>

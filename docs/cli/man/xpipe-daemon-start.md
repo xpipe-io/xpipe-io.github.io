@@ -2,7 +2,7 @@
 
 <h2 id="_name">Name</h2>
 <div class="sectionbody">
-<p>xpipe-daemon-start - Starts the X-Pipe daemon if it is not running</p>
+<p>xpipe-daemon-start - Starts the XPipe daemon if it is not running</p>
 </div>
 <div class="sect1">
 <h2 id="_synopsis">Synopsis</h2>
@@ -16,7 +16,7 @@
 <h2 id="_description">Description</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Starts the X-Pipe daemon if it is not running</p>
+<p>Starts the XPipe daemon if it is not running</p>
 </div>
 </div>
 </div>
