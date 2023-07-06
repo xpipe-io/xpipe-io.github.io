@@ -1,17 +1,17 @@
-# X-Pipe CLI
+# XPipe CLI
 
-The command-line interface of X-Pipe is a fundamental part of the X-Pipe project.
-It gives you the ability to easily access all X-Pipe features on all operating systems.
+The command-line interface of XPipe is a fundamental part of the XPipe project.
+It gives you the ability to easily access all XPipe features on all operating systems.
 
 ## Setup
 
-In case you used an installer to set up X-Pipe on your system,
+In case you used an installer to set up XPipe on your system,
 all environment variable related setup to access the CLI executable from the command-line should already be done.
 You can easily verify this by typing ``xpipe --help`` in a terminal.
 
 In case the ``xpipe`` command can not be found or you are using a portable distribution, you can
 look up the [environment variables](../installation#environment-variables)
-section in the installation manual to add the X-Pipe CLI to your path variable.
+section in the installation manual to add the XPipe CLI to your path variable.
 
 ## Getting Started
 

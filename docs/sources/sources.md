@@ -8,14 +8,14 @@ In short, a data store points to a location where data is stored
 but does not know what kind of data is stored and how to interpret the stored data,
 it only knows how to act as the raw data.
 A data source then uses that data store and additional information on how to interpret the data
-to allow you to access the contained data through X-Pipe, whether through read or write operations.
+to allow you to access the contained data through XPipe, whether through read or write operations.
 
 ## Categories of Data
 
-X-Pipe works on a higher level abstraction than normal pipes.
+XPipe works on a higher level abstraction than normal pipes.
 It differentiates between currently five major categories of data.
 This differentiation allows you to connect producers and consumers in a data-aware fashion,
-i.e. you can connect producers and consumers of the same category while X-Pipe handles the intermediation.
+i.e. you can connect producers and consumers of the same category while XPipe handles the intermediation.
 The different data categories are:
 
 Tables
@@ -43,7 +43,7 @@ source to a text source, as the CSV format is a text-based format.
 
 ## Referring to Data Sources
 
-As the amount of stored X-Pipe data sources can grow to a large number, some form of organization is very useful.
+As the amount of stored XPipe data sources can grow to a large number, some form of organization is very useful.
 For starters, each data sources has a name that can be used to refer to it.
 To allow for an organization of your data sources and also provide
 namespaces to avoid conflicts between data sources with the same name,
@@ -51,8 +51,8 @@ data sources can also be organized into different data source collections.
 
 ### Data Source IDs
 
-As a result, all data sources in the X-Pipe storage have an unique identifier, the data source id.
-These ids can be used to refer to a specific data source from the X-Pipe API or the X-Pipe command-line tools.
+As a result, all data sources in the XPipe storage have an unique identifier, the data source id.
+These ids can be used to refer to a specific data source from the XPipe API or the XPipe command-line tools.
 They consist out of the name of the collection they are in and a data source name, joined together with a colon::
 
     <collection>:<name>
@@ -104,11 +104,11 @@ problem with databases is that the protocols cannot be easily proxied
 and every database solution has a different approach to proxies or
 doesn\'t support it at all.
 
-As a solution, you can use other X-Pipe installations on other machines
+As a solution, you can use other XPipe installations on other machines
 as proxies. Essentially all operations are performed by the remote
-X-Pipe installation and the results are communicated to your local
-installation through the used shell connection. X-Pipe can easily be
+XPipe installation and the results are communicated to your local
+installation through the used shell connection. XPipe can easily be
 installed or updated on a remote machine through the `Install Relay`
 action available for any shell store, no manual setup is required. Once
-X-Pipe is installed on the remote machine, you can use it as a proxy for
+XPipe is installed on the remote machine, you can use it as a proxy for
 your database connections.

@@ -1,6 +1,6 @@
 # Shell connections
 
-X-Pipe introduces a rather new, modular approach to handling remote
+XPipe introduces a rather new, modular approach to handling remote
 connections through remote shells. These shell processes can be running either on your local machine
 or on a remote machine.
 There are many kinds of supported shell connections:
@@ -45,6 +45,6 @@ manually. The only difference is that it automatically closes your
 terminal once you exit the shell.
 
 You can launch a shell connection in the desktop application by clicking on it.
-Alternatively, you are also able to launch your shell connection directly from your terminal using the X-Pipe CLI:
+Alternatively, you are also able to launch your shell connection directly from your terminal using the XPipe CLI:
 
     xpipe launch <connection name>

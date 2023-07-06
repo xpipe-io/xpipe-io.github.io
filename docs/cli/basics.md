@@ -1,14 +1,14 @@
 # Basics
 
 
-## The X-Pipe Daemon
+## The XPipe Daemon
 
-The X-Pipe daemon is the core component that handles all requests of the CLI and APIs.
+The XPipe daemon is the core component that handles all requests of the CLI and APIs.
 The CLI executable therefore needs to communicate with the daemon to pass the commands that it should execute.
 Any executed ``xpipe`` command starts the daemon if it is not running yet.
 In case the daemon needs to be started prior to executing a command, you will see something like this: ::
 
-    Starting X-Pipe daemon ...
+    Starting XPipe daemon ...
     [ - ] 1s
 
 This one time startup should only take a few seconds.

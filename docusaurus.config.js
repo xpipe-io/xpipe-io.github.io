@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'X-Pipe',
+  title: 'XPipe',
   tagline: 'A smart connection manager and remote file explorer',
-  url: 'https://xpipe.io',
+  url: 'https://docs.xpipe.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -17,7 +17,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'xpipe-io', // Usually your GitHub org/user name.
-  projectName: 'xpipe-io.github.io', // Usually your repo name.
+  projectName: 'docs.xpipe-io.github.io', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -29,23 +29,14 @@ const config = {
 
   presets: [
     [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      '@docusaurus/preset-classic',
+      {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          routeBasePath: '/'
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-        },
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      }),
+        blog: false
+      },
     ],
   ],
 
@@ -53,19 +44,17 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'X-Pipe',
+        title: 'XPipe Docs',
         logo: {
-          alt: 'X-Pipe Logo',
+          alt: 'XPipe Logo',
           src: 'img/logo.svg',
         },
         items: [
-          {to: '/download', label: 'Download', position: 'left'},
           {
-            href: '/docs',
-            label: 'Docs',
-            position: 'left',
+            href: 'https://xpipe.io',
+            label: 'xpipe.io',
+            position: 'right',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/xpipe-io',
             label: 'GitHub',
@@ -76,51 +65,8 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Discord',
-                href: 'https://discord.gg/8y89vS8cRb',
-              },
-              {
-                label: 'Slack',
-                href: 'https://join.slack.com/t/x-pipe/shared_invite/zt-1awjq0t5j-5i4UjNJfNe1VN4b_auu6Cg',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/xpipe-io',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Docs',
-                to: '/docs',
-              },
-              {
-                label: 'Blog',
-                to: '/blog',
-              }
-            ],
-          },
-          {
-            title: 'Legal',
-            items: [
-              {
-                label: 'Privacy Policy',
-                to: '/privacy-policy',
-              },
-              {
-                label: 'Imprint',
-                to: '/imprint',
-              }
-            ],
-          },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} X-Pipe`,
+        copyright: `Copyright © ${new Date().getFullYear()} XPipe`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -128,7 +74,7 @@ const config = {
       },
       colorMode: {
         defaultMode: 'light',
-        disableSwitch: true,
+        disableSwitch: false,
         respectPrefersColorScheme: false,
       },
     }),

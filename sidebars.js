@@ -33,7 +33,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'X-Pipe CLI',
+      label: 'XPipe CLI',
       collapsible: false,
       collapsed: false,
       link: {type: 'doc', id: 'cli/index'},

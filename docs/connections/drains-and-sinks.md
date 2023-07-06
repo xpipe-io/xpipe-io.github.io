@@ -39,9 +39,9 @@ As soon as that happens, the command will provide the contents of stdin to the c
 
 ## Usage Examples
 
-One common use case is to seamlessly pipe data from X-Pipe Desktop into a program running in a terminal or the other way round.
+One common use case is to seamlessly pipe data from XPipe Desktop into a program running in a terminal or the other way round.
 For example, let say we have data from an SQL table that we want to use in our terminal.
-Now in theory you can accomplish that solely by using the X-Pipe CLI without using sink drains,
+Now in theory you can accomplish that solely by using the XPipe CLI without using sink drains,
 but let's assume that you prefer to use the desktop application if you can.
 To go from the desktop application to the terminal, you
 have to bridge different environments which is possible with sink drains.

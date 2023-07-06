@@ -12,12 +12,12 @@ what a `data source </guide/sources.html>`_ is.
 
 One of the most common commands that you will need when working with files is the ``xpipe source add`` subcommand.
 Essentially, the ``source add`` command takes a data store, quickly analyzes the type of it,
-and makes it available for you to use by creating an X-Pipe data source.
+and makes it available for you to use by creating an XPipe data source.
 
 As the CSV format is not standardized, there are many possible variants of formatting variants.
 In case a data source requires additional configuration parameters like a CSV file does,
 you will be prompted to confirm or change detected configuration options.
-Each time a data source is added, X-Pipe will try to do the best
+Each time a data source is added, XPipe will try to do the best
 job it can at determining the values for required configuration parameters automatically.
 Therefore, explicit configuration is usually not needed when adding data sources:
 

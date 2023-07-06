@@ -15,7 +15,7 @@ Some data stores determined the available data flows automatically, e.g.
 a file store can be used in input and output mode in case it the correct permissions.
 Other data stores, such as command stores, allow you to set the data flow manually.
 That way you can specify how command should be treated as
-X-Pipe does not know whether the command will work with input, output, or both.
+XPipe does not know whether the command will work with input, output, or both.
 
 ## Command connections
 
@@ -56,11 +56,11 @@ An HTTP store can work in one of the following three modes:
 ### Advanced HTTP Requests
 
 HTTP requests play a fundamental role in accessing many web-based APIs.
-X-Pipe natively supports using HTTP requests as stream connections.
+XPipe natively supports using HTTP requests as stream connections.
 However, this support is not completely exhaustive and does not cover all features of HTTP requests and responses.
 As you will see, you can also use tools like ``cURL`` and command connections to circumvent these limitations.
 
-#### Using X-Pipe
+#### Using XPipe
 
 For example, to access the returned data structure of the API call
 ``https://official-joke-api.appspot.com/random_joke``, we can easily do the following:
@@ -92,7 +92,7 @@ This can easily be verified by executing::
 
 A lot of people however still prefer to use cURL for all of their http request needs from the command-line.
 If you are one of these people or your http request requires more
-advanced parameters that can't be set with X-Pipe, you can also use cURL to achieve the same:
+advanced parameters that can't be set with XPipe, you can also use cURL to achieve the same:
 
     xpipe store add --type cmd
     Command:
