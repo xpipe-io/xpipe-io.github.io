@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'XPipe',
-  tagline: 'A smart connection manager and remote file explorer',
+  title: 'XPipe Docs',
+  tagline: 'A shell connection hub and remote file manager ',
   url: 'https://docs.xpipe.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -17,7 +17,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'xpipe-io', // Usually your GitHub org/user name.
-  projectName: 'docs.xpipe-io.github.io', // Usually your repo name.
+  projectName: 'xpipe-io.github.io', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want

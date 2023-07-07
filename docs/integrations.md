@@ -13,9 +13,7 @@ Supported operating systems:
 
 Supported architectures:
 - **x86_64**: Supported for all operating systems
-- **arm64**: On macOS, the x86_64 version also works on ARM-based systems
-
-XPipe also supports installation in headless environments, such as servers.
+- **arm64**: Supported for macOS
 
 ## Terminals
 
@@ -31,9 +29,16 @@ The following terminals come with out-of-the-box support:
 - Tabby
 
 ##### Linux
-- Genome Terminal
+- Gnome Terminal
 - Konsole
 - Xfce
+- Terminator
+- Kitty
+- Terminology
+- Cool Retro Term
+- Guake
+- Alacritty
+- Tilda
 
 ##### macOS
 - Terminal.app
@@ -42,8 +47,6 @@ The following terminals come with out-of-the-box support:
 - Tabby
 
 Note that XPipe supports setting a custom terminal command in case your favorite terminal is not listed here.
-To improve the user experience however, out of the box support is still preferred, so
-you are free to open [ticket](https://github.com/xpipe-io/xpipe/issues) to request support for your terminal application. 
 
 ### Text Editors
 
@@ -69,8 +72,6 @@ The following text editors are currently supported out of the box:
 - TextEdit.app
 
 Note that XPipe supports setting a custom text editor command in case your favorite editor is not listed here.
-To improve the user experience however, out of the box support is still preferred, so
-you are free to open [ticket](https://github.com/xpipe-io/xpipe/issues) to request support for your editor application. 
 
 ## Remote Systems
 
@@ -90,6 +91,6 @@ the possibility of it being able to be used by using a custom command.
 
 There are two basic requirements for a remote system.
 First, it has to have a shell installed.
-This can sometimes be not the case for bare docker containers they don't even have `sh` installed.
+This can sometimes be not the case for bare containers they don't even have `sh` installed.
 Second, the file system has to be writable as XPipe will
-create a few temporary files they're a required in order for everything to function correctly.
+create a few temporary files that are required in order for everything to function correctly.

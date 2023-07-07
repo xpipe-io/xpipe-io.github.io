@@ -29,6 +29,9 @@ The installers handle all the setup and XPipe will work right out of the box.
 By using the installer distribution, you can also make use of the autoupdate functionality,
 which you can of course also disable if wanted.
 
+The available installation scripts do nothing else than automatically downloading and installing these same installer releases,
+so it doesn't make any functional difference whether you manually install them or use an installation script.
+
 ## Portable Installation
 
 Alternatively, you can also make use of the portable XPipe distributions.
@@ -93,49 +96,3 @@ In most cases, the installation location used above would be `/Applications/XPip
 Also don't forget to reload your configuration with `source <dotfile>`.
 </TabItem>
 </Tabs>
-
-### Manpages
-
-To be able to access the man pages of the XPipe CLI with `man <xpipe command>`,
-you also have to register the manpage files as follows:
-<Tabs groupId="operating-systems">
-<TabItem value="linux" label="Linux">
-
-```
-cp "$XPIPE_HOME/cli/man/*" /usr/share/man/man1/
-mandb
-```
-
-</TabItem>
-<TabItem value="macos" label="MacOS">
-
-```
-cp "$XPIPE_HOME/Resources/cli/man/*" /usr/share/man/man1/
-mandb
-```
-
-</TabItem>
-</Tabs>
-
-### Bash Autocompletion
-
-To be able to use the tab completion for the XPipe CLI commands, you have to do as follows:
-
-<Tabs groupId="operating-systems">
-<TabItem value="linux" label="Linux">
-
-```
-ln -s "$XPIPE_HOME/cli/xpipe_completion" /etc/bash_completion.d/xpipe
-```
-
-</TabItem>
-<TabItem value="macos" label="MacOS">
-
-```
-ln -s "$XPIPE_HOME/Resources/cli/xpipe_completion" /etc/bash_completion.d/xpipe
-```
-
-</TabItem>
-</Tabs>
-
-You need to restart your shell to make use of the tap completion afterwards.
