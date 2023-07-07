@@ -10,7 +10,7 @@ all environment variable related setup to access the CLI executable from the com
 You can easily verify this by typing ``xpipe --help`` in a terminal.
 
 In case the ``xpipe`` command can not be found or you are using a portable distribution, you can
-look up the [environment variables](../installation#environment-variables)
+look up the [environment variables](../index#environment-variables)
 section in the installation manual to add the XPipe CLI to your path variable.
 
 ## Getting Started
