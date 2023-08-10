@@ -1,23 +1,21 @@
-# xpipe launch
+# xpipe sink
 
 <h2 id="_name">Name</h2>
 <div class="sectionbody">
-<p>xpipe-launch - Launches the specified connection</p>
+<p>xpipe-sink - Write the contents of stdin to a remote file.</p>
 </div>
 <div class="sect1">
 <h2 id="_synopsis">Synopsis</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>xpipe launch</strong> <em>&lt;id&gt;</em></p>
+<p><strong>xpipe sink</strong> <em>&lt;source&gt;</em> <em>&lt;path&gt;</em></p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_description">Description</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Launches the specified connection</p>
-</div>
+
 </div>
 </div>
 <div class="sect1">
@@ -25,9 +23,13 @@
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><em>&lt;id&gt;</em></dt>
+<dt class="hdlist1"><em>&lt;source&gt;</em></dt>
 <dd>
-<p>The connection id.</p>
+<p>The source connection</p>
+</dd>
+<dt class="hdlist1"><em>&lt;path&gt;</em></dt>
+<dd>
+<p>The file path</p>
 </dd>
 </dl>
 </div>

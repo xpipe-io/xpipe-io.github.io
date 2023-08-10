@@ -36,6 +36,18 @@
 <dd>
 <p>Launches the specified connection</p>
 </dd>
+<dt class="hdlist1"><a href="xpipe-sink"><strong>sink</strong></a></dt>
+<dd>
+<p>Write the contents of stdin to a remote file.</p>
+</dd>
+<dt class="hdlist1"><a href="xpipe-drain"><strong>drain</strong></a></dt>
+<dd>
+<p>Reads the contents of a remote file and prints it to stdout.</p>
+</dd>
+<dt class="hdlist1"><a href="xpipe-ls"><strong>ls</strong>, <strong>list</strong></a></dt>
+<dd>
+<p>List all connections.</p>
+</dd>
 <dt class="hdlist1"><a href="xpipe-daemon"><strong>daemon</strong></a></dt>
 <dd>
 <p>Commands for controlling the XPipe daemon</p>
