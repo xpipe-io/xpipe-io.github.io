@@ -2,7 +2,7 @@
 
 <h2 id="_name">Name</h2>
 <div class="sectionbody">
-<p>xpipe-open - Opens the specified inputs with the XPipe daemon</p>
+<p>xpipe-open - Opens the XPipe application</p>
 </div>
 <div class="sect1">
 <h2 id="_synopsis">Synopsis</h2>
@@ -16,7 +16,7 @@
 <h2 id="_description">Description</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Opens the specified inputs with the XPipe daemon</p>
+<p>Opens the XPipe application</p>
 </div>
 </div>
 </div>

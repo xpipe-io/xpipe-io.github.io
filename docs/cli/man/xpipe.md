@@ -30,11 +30,11 @@
 <dl>
 <dt class="hdlist1"><a href="xpipe-open"><strong>open</strong></a></dt>
 <dd>
-<p>Opens the specified inputs with the XPipe daemon</p>
+<p>Opens the XPipe application</p>
 </dd>
 <dt class="hdlist1"><a href="xpipe-launch"><strong>launch</strong></a></dt>
 <dd>
-<p>Launches the specified connection</p>
+<p>Launches a specified shell connection in your existing terminal session</p>
 </dd>
 <dt class="hdlist1"><a href="xpipe-sink"><strong>sink</strong></a></dt>
 <dd>
@@ -46,15 +46,11 @@
 </dd>
 <dt class="hdlist1"><a href="xpipe-ls"><strong>ls</strong>, <strong>list</strong></a></dt>
 <dd>
-<p>List all connections.</p>
+<p>List all stored connections and their ids</p>
 </dd>
 <dt class="hdlist1"><a href="xpipe-daemon"><strong>daemon</strong></a></dt>
 <dd>
 <p>Commands for controlling the XPipe daemon</p>
-</dd>
-<dt class="hdlist1"><a href="xpipe-help"><strong>help</strong></a></dt>
-<dd>
-<p>Displays help information about the specified command</p>
 </dd>
 <dt class="hdlist1"><a href="xpipe-version"><strong>version</strong></a></dt>
 <dd>

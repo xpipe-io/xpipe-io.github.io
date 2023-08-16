@@ -2,7 +2,7 @@
 
 <h2 id="_name">Name</h2>
 <div class="sectionbody">
-<p>xpipe-launch - Launches the specified connection</p>
+<p>xpipe-launch - Launches a specified shell connection in your existing terminal session</p>
 </div>
 <div class="sect1">
 <h2 id="_synopsis">Synopsis</h2>
@@ -16,7 +16,7 @@
 <h2 id="_description">Description</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Launches the specified connection</p>
+<p>Launches a specified shell connection in your existing terminal session</p>
 </div>
 </div>
 </div>

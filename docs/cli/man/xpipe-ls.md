@@ -2,7 +2,7 @@
 
 <h2 id="_name">Name</h2>
 <div class="sectionbody">
-<p>xpipe-ls - List all connections.</p>
+<p>xpipe-ls - List all stored connections and their ids</p>
 </div>
 <div class="sect1">
 <h2 id="_synopsis">Synopsis</h2>
