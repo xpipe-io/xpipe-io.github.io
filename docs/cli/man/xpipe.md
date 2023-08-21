@@ -16,10 +16,10 @@
 <h2 id="_description">Description</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Command-line interface to interact with the XPipe daemon.</p>
+<p>Command-line interface to interact with the XPipe daemon. Note that the feature set of the CLI is not gigantic as XPipe is primarily designed to be used via the GUI.</p>
 </div>
 <div class="paragraph">
-<p>For a full reference, see either the man pages (local or online) or the help command, available via xpipe help &lt;subcommand&gt;.</p>
+<p>For a full reference, see either the man pages (local or online) or the help command, available via xpipe --help.</p>
 </div>
 </div>
 </div>
