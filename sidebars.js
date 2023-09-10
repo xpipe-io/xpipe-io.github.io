@@ -54,7 +54,7 @@ const sidebars = {
       ],
     },
     'integrations',
-    //'comparison'
+    'contributing'
   ],
 };
 

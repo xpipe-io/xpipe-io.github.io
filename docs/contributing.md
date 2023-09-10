@@ -2,6 +2,7 @@
 
 If you're interested in contributing to XPipe, you can easily do so! Just submit a pull request with your changes.
 
+In terms of development environment setup, be sure to read the [development page](https://github.com/xpipe-io/xpipe/blob/master/DEVELOPMENT.md) first.
 Especially when starting out, it might be a good idea to start with easy tasks first. Here's a selection of suitable common tasks that are very easy to implement:
 
 ### Implementing support for a new editor
