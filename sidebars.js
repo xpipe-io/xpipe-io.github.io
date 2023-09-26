@@ -54,7 +54,8 @@ const sidebars = {
       ],
     },
     'integrations',
-    'contributing'
+    'contributing',
+    'terms-of-service'
   ],
 };
 
