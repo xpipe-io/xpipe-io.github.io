@@ -4,8 +4,6 @@ XPipe UG (haftungsbeschränkt), located at Reichertshalde 81, 71642 Ludwigsburg,
 
 The customer intends to use XPipe's server connection management software for private or business purposes. To enable the customer to use the software, the customer is granted a non-exclusive, non-transferable, time-limited right to use the software in accordance with these terms of service ("Terms of Service").
 
-The Terms of Service can be viewed and printed out at any time in the XPipe desktop application or at http://docs.xpipe.io/terms-of-service. The customer is independently responsible for saving the text of the contract at the time the contract is concluded. No copies will be provided by XPipe after the fact.
-
 ## 1. Subject of the agreement
 
 **1.1** Subject to these Terms of Service and the service description, XPipe grants customer access to the products in accordance with the service description and applicable documentation for the term of this agreement.
