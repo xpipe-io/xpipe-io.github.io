@@ -53,6 +53,7 @@ const sidebars = {
       ],
     },
     'security',
+    'troubleshooting',
     {
       type: 'category',
       label: 'Legal',
