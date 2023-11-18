@@ -121,25 +121,6 @@ other information stored by XPipe that is not explicitly sent to that host.
 
 ## Antivirus programs
 
-### Windows Defender
-
-It may occasionally happen that Windows Defender warns and
-even sometimes deletes XPipe due to it identifying the application as malware.
-The reason for this is simple: The application is not signed with an EV code signing
-certificate as this would require a company for XPipe to be set up and would also cost around 600$+ per year.
-If XPipe was signed with such a certificate, as are most Windows applications distributed by companies, all warnings
-would go away automatically.
-The Windows Defender / Windows SmartScreen system is essentially pay-to-win here.
-Just paying the appropriate amount will automatically whitelist your application (even it is unsafe / essentially
-malware)
-while not paying will often blacklist it, bullying you into buying it.
-You can read more about this system in [this StackExchange post](https://security.stackexchange.com/a/139520).
-The manual whitelisting process without an EV certificate is purposely made difficult and essentially useless.
-The Windows Defender detection rules are garbage and not deterministic, i.e.
-an identical application can be flagged on one system but not the other, even though both are connected to the internet
-and the Microsoft services.
-In summary, don't rely on Windows Defender to be accurate when it comes to false-positives.
-
 ### macOS
 
 On macOS the application bundle is signed and notarized and will therefore not emit any warnings.
