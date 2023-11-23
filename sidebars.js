@@ -18,19 +18,6 @@ const sidebars = {
 
   tutorialSidebar: [
     'index',
-      //'installation',
-    {
-      type: 'category',
-      label: 'Connections',
-      collapsible: true,
-      collapsed: true,
-      link: {type: 'doc', id: 'connections/index'},
-      items: [
-        'connections/shell-connections',
-        //'connections/stream-connections',
-        //'connections/drains-and-sinks',
-      ],
-    },
     {
       type: 'category',
       label: 'XPipe CLI',
