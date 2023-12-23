@@ -39,6 +39,7 @@ const sidebars = {
         }
       ],
     },
+    'preview',
     'security',
     'troubleshooting',
     {
