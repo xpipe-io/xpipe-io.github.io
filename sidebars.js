@@ -18,7 +18,6 @@ const sidebars = {
 
   tutorialSidebar: [
     'index',
-    'license-activation',
     {
       type: 'category',
       label: 'XPipe CLI',
@@ -41,6 +40,7 @@ const sidebars = {
       ],
     },
     'preview',
+    'license-activation',
     'security',
     'troubleshooting',
     {
