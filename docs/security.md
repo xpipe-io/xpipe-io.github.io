@@ -118,26 +118,3 @@ so it would be possible for malicious program with sufficient privileges to obta
 This would require an attacker to be able to access files of the user that is used to log into the remote system.
 It should however not be possible for any malicious program on the remote host to obtain
 other information stored by XPipe that is not explicitly sent to that host.
-
-## Antivirus programs
-
-### macOS
-
-On macOS the application bundle is signed and notarized and will therefore not emit any warnings.
-For macOS this process does not require a company to be
-set up and also only costs 125$ per year and is therefore much easier to accomplish.
-
-### Windows antivirus programs
-
-In some cases, it might occur that your antivirus program flags XPipe as malware.
-This is due to the fact that XPipe launches shells and executes various commands in them,
-which can be interpreted as malicious activity as some viruses use
-the same approach and does lead to some false-positives.
-
-For this reason, all artifacts of every release are automatically uploaded and analyzed on VirusTotal,
-so uploading the release you downloaded to VirusTotal should instantly show analysis results.
-From there you should be able to get a more accurate overview over the actual threat level of XPipe.
-
-If such a detection also happens on your end, you might have to
-explicitly whitelist XPipe in order for it to work correctly.
-Having access to shells is necessary for XPipe, there is no fallback alternative built in that does not launch shells.
