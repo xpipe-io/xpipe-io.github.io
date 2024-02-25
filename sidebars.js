@@ -39,6 +39,7 @@ const sidebars = {
         }
       ],
     },
+    'directories',
     'preview',
     'license-activation',
     'security',
