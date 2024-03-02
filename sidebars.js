@@ -40,6 +40,7 @@ const sidebars = {
       ],
     },
     'directories',
+    'two-step-connections',
     'preview',
     'license-activation',
     'security',
