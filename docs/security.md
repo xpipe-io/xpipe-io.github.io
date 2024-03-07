@@ -28,7 +28,7 @@ then there is no technical way of preventing malicious programs to also infect X
 XPipe essentially delegates any form of connection and shell handling to your existing command-line tools.
 It does not come with any remote handling capabilities of its own.
 Therefore, any used command-line program should be secure.
-If for example your `ssh` command-line program or its connections are susceptible to MITM attacks or
+If, for example, your `ssh` command-line program or its connections are susceptible to MITM attacks or
 vulnerable in any other way, there is no way for XPipe to guarantee that the sensitive information can be kept secure.
 It is your responsibility to use the programs in a secure environment and keep them up to date with security patches and
 more.
@@ -40,33 +40,39 @@ and adapt the environment to make it work properly.
 The called program therefore automatically uses your
 system configuration for it, e.g. your system SSH configs.
 
-XPipe does not perform any validation or version checking for the programs it calls.
-For example, when establishing an ssh connection through XPipe, it will straight up call `ssh user@host <options>`.
-It is assumed that this `ssh` executable is secure and the one that you actually want to use.
-
 ## Data security and privacy
 
 The general approach of XPipe can be summarized as follows:
 
-- Any sensitive information should be kept as secure as possible exclusively on your local machine,
+- Any sensitive information is kept as secure as possible exclusively on your local machine,
   both while XPipe is running and also not running
 - When sensitive information is required on another remote system that is connected through XPipe, that information
-  should be transferred and
-  remain there as briefly and securely as possible
-- No sensitive information should be sent to any other server outside your network of trusted connections
+  remains there as briefly and securely as possible
+- No sensitive information is sent to any other server outside your network of trusted connections
 
 ### Storage of sensitive information
 
-All XPipe data is exclusively stored on your local machine at `~/.xpipe/storage`. You can choose to change this storage location in the settings menu.
+All XPipe connection data is exclusively stored on your local machine at `~/.xpipe/storage`. You can choose to change this storage location in the settings menu.
 
-You have the option to either fetch any sensitive information like passwords from outside sources like prompts or password managers. In that case, XPipe doesn't have to store any of that information itself.
+You have the option to fetch any sensitive information like passwords from outside sources like password managers or enter them at connection time through a prompt window. In that case, XPipe doesn't have to store any secrets itself.
 
-In case you choose to store passwords within XPipe, all sensitive information is encrypted when it is saved to disk on your local machine using AES with either:
+In case you choose to store passwords and other secrets within XPipe, all sensitive information is encrypted when it is saved to disk on your local machine using AES with either:
 
-- A custom master key that can be set by you in the settings menu
+- A custom master passphrase that can be set by you in the settings menu
   (This option is only as secure as the password you choose)
-- A somewhat dynamically generated key (This option can be reverse
-  engineered though, there is no way of perfectly securing your data without any custom key)
+- A dynamically generated key file at `~/.xpipe/storage/vaultkey` (The data can then only be decrypted with that file present)
+
+By default, general connection data is not encrypted, only secrets are.
+So things like hostnames and usernames are stored without encryption, which is in line with many other tools.
+There is an available setting to encrypt all connection data if you want to do that.
+
+### Sharing of information across machines / with team members
+
+XPipe allows you to synchronize your connections with a remote git repository.
+This repository can be set up by yourself with any provider of your choice using any authentication scheme you like.
+XPipe supports all authentication schemes, both HTTP and SSH with advanced options like password prompts, key files, smart cards, and more.
+
+Any information is then regularly committed to that repository. This repository can then be cloned on other systems or by other collaborators to have access to the same connections. 
 
 ### Passing of sensitive information
 
@@ -74,7 +80,7 @@ When any kind of login information is required by a command-line program, it has
 
 In case a program accepts password input via stdin, this process is relatively straightforward. Then the passed sensitive information is just written into the stdin of the program and does not show up in any history or file system.
 
-When a program only accepts password input via an environment variable or an askpass program, a self deleting password supplier script file is generated by XPipe.
+When a program only accepts password input via an environment variable or an askpass program, a self-deleting password supplier script file is generated by XPipe.
 This script contains the encrypted password and will supply the password to the target program exactly once when invoked and immediately deletes itself afterward.
 This behavior ensures that there is no leftover password script after an operation is performed.
 As a secondary measure, for cases in which the calling program crashes and is not able to execute the script and therefore doesn't delete the password script, the generated script directory is also frequently cleaned.
@@ -85,36 +91,17 @@ As a result, no sensitive information of yours should show up in any kind of she
 Whenever you open a remote connection in a terminal from XPipe, your terminal sometimes shows the name of a script located in your temp directory in the title bar to indicate that you're currently executing it.
 The naming scheme of these scripts is usually something like `exec-<id>.(bat|sh|ps1)`.
 This is intended as these scripts contain all commands that are required to realize the functionality of connecting and initializing the shell environment.
-These scripts do not contain any sensitive information, you are free to inspect them yourselves in the temp directory.
+These scripts do not contain any sensitive information, you are free to inspect them yourselves in the temporary directory.
 
-In case a script connects to a remote system and passes login information to a program via variables or askpass
-programs, it automatically becomes useless after being invoked once (See [above](#passing-of-sensitive-information)).
-As the script is run immediately after it is created initially, e.g. when using the `Open in terminal` functionality, it becomes useless pretty much instantly so any attacker doesn't obtain any sensitive information from it.
+In some cases, e.g., when you want to run shell environment init commands on a remote system, XPipe also has to create shell scripts on the remote system.
+If you don't want XPipe to modify the remote file system under any circumstances, there is a setting to completely disable this behavior.
 
 ### Logging
 
 By default, XPipe creates log files located in `~/.xpipe/logs`. These log files do not contain any sensitive information.
-If you choose to launch XPipe in debug mode, these logs are printed to the console instead and will contain a lot more and finer grained information, some of which might be sensitive.
+If you choose to launch XPipe in debug mode, log information is printed to the console instead and will contain a lot more and finer grained information, some of which might be sensitive.
 
 ### Issue reports
 
 Whenever an error occurs within XPipe or you choose to open the error reporter dialog, you have the option to automatically send an error report with optional feedback and attachments.
-This error report does not contain any sensitive information, unless you explicitly choose to attach log files.
-
-## Isolation of systems
-
-Any infected remote system should be isolated enough such that any infection can't spread through XPipe.
-
-### User isolation
-
-All relevant files like configuration files and other required temporary files are only accessible by the current user.
-Any other user on a system can't read or write them unless they have root/Administrator privileges.
-
-### Isolation of remote systems
-
-When you add a remote system as a host within XPipe, it is implicitly assumed that you trust this system.
-Any required login information is sent to and handled on that remote host when required,
-so it would be possible for malicious program with sufficient privileges to obtain any information sent to that host.
-This would require an attacker to be able to access files of the user that is used to log into the remote system.
-It should however not be possible for any malicious program on the remote host to obtain
-other information stored by XPipe that is not explicitly sent to that host.
+This error report does not contain any personal information unless you explicitly choose to attach log files.
