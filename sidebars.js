@@ -45,6 +45,7 @@ const sidebars = {
     'license-activation',
     'security',
     'troubleshooting',
+    'license',
     {
       type: 'category',
       label: 'Legal',
