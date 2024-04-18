@@ -30,4 +30,4 @@ You can also control the daemon manually from the command-line. There are severa
    Changes the daemon operation mode.
    Can be useful to manually let the daemon run in the background.
 
-Note that for everyday work these commands are not needed.
+Note that for everyday work, these commands are not needed.

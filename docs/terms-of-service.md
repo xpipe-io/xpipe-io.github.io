@@ -18,7 +18,7 @@ The customer intends to use XPipe's server connection management software for pr
 
 ## 3. Conclusion of contract and contractual relationships; Registration requirements; Modifications of the Terms of Service
 
-**3.1** By clicking on the button "start trial" or "submit order" on the shop page at https://buy.xpipe.io you submit an offer to us to order the software licenses and/or the software maintenance service selected by you in a legally binding manner and subject to payment. A contract for the services ordered by you comes into effect with our order confirmation, which we send to the e-mail address specified by you in the order immediately after receiving your order. Please check your SPAM folder regularly after placing your order with us in order to avoid that our order confirmation is directed there by your IT systems and remains unnoticed. With the order confirmation, you will also receive the license keys required to activate the licenses you ordered.
+**3.1** By clicking on the button "submit order" on the shop page at https://buy.xpipe.io you submit an offer to us to order the software licenses and/or the software maintenance service selected by you in a legally binding manner and subject to payment. A contract for the services ordered by you comes into effect with our order confirmation, which we send to the e-mail address specified by you in the order immediately after receiving your order. Please check your SPAM folder regularly after placing your order with us in order to avoid that our order confirmation is directed there by your IT systems and remains unnoticed. With the order confirmation, you will also receive the license keys required to activate the licenses you ordered.
 
 **3.2** XPipe shall not store the terms and conditions of the contract for the User, without prejudice to the fulfillment of the statutory information obligations.
 
@@ -28,7 +28,7 @@ The customer intends to use XPipe's server connection management software for pr
 
 ## 4. Service description and scope
 
-**4.1** Insofar as a paid subscription agreement has been concluded, XPipe shall provide the agreed services. Insofar as XPipe also provides content and/or services voluntarily and free of charge, it shall do so without assuming any legal obligation. XPipe shall be entitled to change, expand or limit these services at any time.
+**4.1** Insofar as a paid license agreement has been concluded, XPipe shall provide the agreed services. Insofar as XPipe also provides content and/or services voluntarily and free of charge, it shall do so without assuming any legal obligation. XPipe shall be entitled to change, expand or limit these services at any time.
 
 **4.2** XPipe guarantees an availability of 99% or higher, based on the calendar year, for the server for downloading the Software (this currently corresponds to the XPipe website) as well as for the server for registration and/or obtaining licenses. Not included are downtimes caused by necessary maintenance work, force majeure, technical disruptions of the Internet or other reasons for which XPipe is not responsible.
 
@@ -48,9 +48,9 @@ The customer intends to use XPipe's server connection management software for pr
 
 **5.3** Only one registration may be maintained per person at any one time.
 
-**5.4** The User is obliged to keep his access data secret and not to pass it on to third parties. The transfer of a paid subscription to third parties is prohibited.
+**5.4** The User is obliged to keep his access data secret and not to pass it on to third parties. The transfer of a paid license to third parties is prohibited.
 
-**5.5** The User is obliged to observe the statutory copyrights and other rights existing for the contents of the paid subscriptions as well as for the other contents in the XPipe offer. The User may not reproduce, distribute or make publicly available such content or remove technical protective measures or copyright or legal notices unless this is expressly permitted.
+**5.5** The User is obliged to observe the statutory copyrights and other rights existing for the contents of the paid licenses as well as for the other contents in the XPipe offer. The User may not reproduce, distribute or make publicly available such content or remove technical protective measures or copyright or legal notices unless this is expressly permitted.
 
 **5.6** The User shall be obliged to provide, at his own expense, hardware and software as well as an Internet connection for retrieving the agreed content and/or services from the XPipe offer.
 
@@ -70,19 +70,11 @@ The customer intends to use XPipe's server connection management software for pr
 
 ## 7. Contract duration, automatic renewal, pause, termination
 
-**7.1** The paid subscription contract is valid for a certain minimum term. For example, it can be one (1) month or one (1) year, based on user's choice. At the end of each subscription period, the subscription will be automatically renewed depending on the term of the subscription period unless terminated by User before the last day of the current subscription period.
+**7.1** The paid license contract is valid for a certain minimum term. For example, it can be one (1) year, based on user's choice.
 
-**7.2** The User or XPipe may terminate the contract at any time, with one day's notice before the end of the minimum term. The User may continue to use the XPipe service until the end of the minimum term. If the contract is not properly terminated by the end of the minimum term, it will be automatically renewed and a paid subscription will be activated.
+**7.2** The right of both contracting parties to terminate for cause in accordance with the law shall remain unaffected. XPipe shall have an extraordinary reason for termination if the User provides misleading information during registration or ordering or has repeatedly violated the Terms of Service. The prerequisite for this is that XPipe has previously warned the User unsuccessfully in order to demand compliance with the contractual obligations.
 
-**7.3** For the effective termination, the user may give notice of termination online via the function provided on the billing page at https://buy.xpipe.io/billing. Users can always contact us at hello@xpipe.io for help with ending their subscription.
-
-**7.4** The right of both contracting parties to terminate for cause in accordance with the law shall remain unaffected. XPipe shall have an extraordinary reason for termination if the User provides misleading information during registration or ordering or has repeatedly violated the Terms of Service. The prerequisite for this is that XPipe has previously warned the User unsuccessfully in order to demand compliance with the contractual obligations.
-
-**7.5** If XPipe offers a free trial period for a paid subscription and this is agreed with the User, the agreed contract term of the paid subscription shall be extended accordingly. In this case, the extended period shall apply first (with an ordinary special termination right of the User, if applicable, if agreed) and thereafter the regular term of the paid subscription.
-
-**7.6** Within a free trial period, User and XPipe are allowed to terminate the contract at any time with immediate effect.
-
-**7.7** In the event of an act with fraudulent intent, a severe, persisting, imminent or repeated material breach of these Terms of Service, XPipe is entitled to suspend the User's access to the Software immediately and indefinitely. User is informed in writing (email is sufficient). The suspicion of fraudulent intent is sufficient.
+**7.3** In the event of an act with fraudulent intent, a severe, persisting, imminent or repeated material breach of these Terms of Service, XPipe is entitled to suspend the User's access to the Software immediately and indefinitely. User is informed in writing (email is sufficient). The suspicion of fraudulent intent is sufficient.
 
 ## 8. Liability
 
@@ -114,7 +106,7 @@ To XPipe UG (haftungsbeschränkt), Reichertshalde 81, 71642 Ludwigsburg, Germany
 
 **9.2** If the customer is a consumer within the scope of § 13 German Civil Code (Bürgerliches Gesetzbuch, BGB), the customer shall be entitled to the statutory warranty rights.
 
-**9.3** If the customer is an entrepreneur within the meaning of § 14 of the German Civil Code (BGB), XPipe shall assume warranty for the products in the case of paid subscriptions only to the extent set forth in the following provisions.
+**9.3** If the customer is an entrepreneur within the meaning of § 14 of the German Civil Code (BGB), XPipe shall assume warranty for the products in the case of licenses only to the extent set forth in the following provisions.
 
 **9.4** If the products XPipe provides are defective, XPipe will provide an improved or new product within a reasonable time after receiving a written complaint from the customer. If the Software is used by a third party licensed by XPipe, publicly available upgrades, updates or patches shall be deemed sufficient.
 
@@ -144,4 +136,4 @@ To XPipe UG (haftungsbeschränkt), Reichertshalde 81, 71642 Ludwigsburg, Germany
 
 **10.7** If any provision of this Terms of Service is invalid, void or unenforceable under any present or future law, the remainder of this Terms of Service shall continue in full force and effect. To the extent that the invalid, void or unenforceable provision is a material term of the agreement, the parties agree to jointly negotiate a valid alternative provision.
 
-As of: 20th September 2023
+As of: 18th April 2024

@@ -1,6 +1,6 @@
 # Source license
 
-XPipe follow is an open core model, which essentially means that the main application is open source while certain other components are not.
+XPipe follows an open core model, which essentially means that the main application is open source while certain other components are not.
 This mainly concerns the features only available in the professional edition and the shell handling library implementation. Furthermore, some CI pipelines and tests that run on private servers are also not included in the open repository.
 
 The distributed XPipe application consists out of two parts:
