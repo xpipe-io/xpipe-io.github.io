@@ -26,7 +26,7 @@ const config = {
   // Find more information at: https://docusaurus.io/docs/api/docusaurus-config#i18n
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'da', 'de',  'fr', 'fa'],
+    locales: ['en', 'da', 'de', 'fr'],
     localeConfigs: {
       en: {
         label: 'English',
