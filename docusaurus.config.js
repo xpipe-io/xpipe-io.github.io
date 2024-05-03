@@ -24,6 +24,9 @@ const config = {
   // to replace "en" with "zh-Hans". ISO Language Code Table
   // You can find your code at: http://www.lingoes.net/en/translator/langcode.htm
   // Find more information at: https://docusaurus.io/docs/api/docusaurus-config#i18n
+
+  // Be sure to run "npm run start -- --locale de" to generate the locale files.
+  
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'da', 'de', 'fr'],
