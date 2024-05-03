@@ -21,10 +21,40 @@ const config = {
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
+  // to replace "en" with "zh-Hans". ISO Language Code Table
+  // You can find your code at: http://www.lingoes.net/en/translator/langcode.htm
+  // Find more information at: https://docusaurus.io/docs/api/docusaurus-config#i18n
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'da', 'de',  'fr', 'fa'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en-US',
+        calendar: 'gregory',
+        path: 'en',
+      },
+      de: {
+        label: 'German',
+        direction: 'ltr',
+        htmlLang: 'de-DE',
+        path: 'de',
+      },
+      da: {
+        label: 'Danish',
+        direction: 'ltr',
+        htmlLang: 'da-DK',
+        path: 'da',
+      },
+      // You can omit a locale (e.g. fr) if you don't need to override the defaults
+      fr: {
+        label: 'French',
+        direction: 'ltr',
+        htmlLang: 'fr-FR',
+        path: 'fr',
+      },
+    },
   },
 
   presets: [
@@ -58,6 +88,10 @@ const config = {
           {
             href: 'https://github.com/xpipe-io',
             label: 'GitHub',
+            position: 'right',
+          },
+          {
+            type: 'localeDropdown',
             position: 'right',
           },
         ],
