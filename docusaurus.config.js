@@ -103,7 +103,7 @@ const config = {
         style: 'dark',
         links: [
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} XPipe`,
+        copyright: `Copyright © 2023-${new Date().getFullYear()} XPipe UG (haftungsbeschränkt)`,
       },
       prism: {
         theme: lightCodeTheme,
