@@ -1,4 +1,4 @@
-## XPipe Shortcut handling
+# XPipe Shortcut handling
 XPipe supports common industrial shortcuts.
 
 - Files that are right-clicked are now also included in the selection

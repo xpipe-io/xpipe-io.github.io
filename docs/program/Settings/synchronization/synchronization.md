@@ -20,9 +20,9 @@ When using the synchronizing funtion for the first time, it is important to have
 
 Make a `TOKEN` on the git platform of your choice, and save it for later. XPipe will ask every time you start XPipe, unless you setup the token and username in a credential manager or an enviromental argument.
 
-**You can find your (PAT) page here:**
-**Github**: [Personal access tokens (classic)](https://github.com/settings/tokens)
-**GitLab**: [Personal access token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html)
+**You can find your (PAT) page here:**<br/>
+**Github**: [Personal access tokens (classic)](https://github.com/settings/tokens)<br/>
+**GitLab**: [Personal access token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html)<br/>
 **BitBucket**: [Personal access token](https://support.atlassian.com/bitbucket-cloud/docs/access-tokens/)<br/>**Gitea**: `Settings -> Applications -> Manage Access Tokens section` |
 Set the token permission for repository to Read and Write. The rest of the token permissions can be set as Read.
 
