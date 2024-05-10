@@ -9,12 +9,11 @@ In the dropdown menu you can see status icons on what terminal emulators you hav
 
 The `Test` is to "test" if the terminal emulator is working correctly with XPipe. 
 
-## Kitty terminal
+## MacOS Terminal Issues 
 
 Please test the terminal via `XPipe -> Settings -> Terminal -> Press "Test"`.
 
-**Common MacOS Kitty issue:**
-Check your privacy settings, specifically “Full Disk Access.” Add Kitty/XPipe if it’s not already in there. If it’s already there try removing it and re-adding it. Sometimes it helps closing the terminal via the dock and reopen it.
+**Common MacOS Permission issue:**
+Check your privacy settings, specifically “Full Disk Access.” Add e.g Kitty/XPipe if it’s not already in there. If it’s already there try removing it and re-adding it. Sometimes it helps closing the terminal via the dock and reopen it. 
 
 Alternatively you can re-install the terminal.
-https://sw.kovidgoyal.net/kitty/binary/

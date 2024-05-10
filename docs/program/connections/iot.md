@@ -6,5 +6,3 @@ You can connect to IOT devices by enabling the `Don't interact with system` for 
 **Know onces are:**
 - `An error occurred: io.xpipe.core.process.ProcessOutputException: Process did not start up properly and had to be killed: Shell did not respond on stderr within timeout interval.` And can be resolved by enabling the option.
 
-### Known devices that need the "don't interact"
-- Calix Router 
