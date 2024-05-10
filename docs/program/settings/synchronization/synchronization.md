@@ -34,4 +34,7 @@ To have your connections put inside your git repository, you need to right-click
 
 And TA-DA!! 🎉 You now have all your connections in your git repository.
 
-
+### It won't sync with my git repository?
+(This will however be fix'd in a future release)
+- Check if the git lang. on your system is English.
+- Check if you have the correct login information or URL to the repository.
