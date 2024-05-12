@@ -1,6 +1,6 @@
 # Directory locations
 
-XPipe utilizes the following directories:
+XPipe uses the following directories:
 
 ## Installation data
 * `%LOCALAPPDATA%\XPipe` on Windows
@@ -39,7 +39,9 @@ When you choose to bring certain user scripts to a remote system, they are copie
 
 ## Script data
 
-In case any created user script has to write some data to a system, e.g. the starship scripts installing starship files, they are created in
+In case any created user script has to write some data to a system,
+e.g., the starship scripts installing starship files;
+they are created in
 * `%TEMP%\xpipe\scriptdata` on Windows
 * `/tmp/xpipe/$USER/scriptdata` on Linux
 * `/tmp/xpipe/$USER/scriptdata` on macOS
