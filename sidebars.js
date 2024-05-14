@@ -20,14 +20,23 @@ const sidebars = {
     'index',
     {
       type: 'category',
-      label: 'XPipe CLI',
+      label: 'App reference',
+      collapsible: true,
+      collapsed: false,
+      link: {type: 'doc', id: 'program/index'},
+      items: [
+          'shortcuts',
+          'synchronization',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'CLI reference',
       collapsible: true,
       collapsed: true,
       link: {type: 'doc', id: 'cli/index'},
       items: [
           'cli/basics',
-          //'cli/example',
-          //'cli/tips',
         {
           type: 'category',
           label: 'Manpages',
@@ -39,25 +48,35 @@ const sidebars = {
         }
       ],
     },
-    'directories',
-    'two-step-connections',
-    'preview',
-    'license-activation',
-    'security',
-    'troubleshooting',
-    'license',
+  {
+      type: 'category',
+      label: 'Troubleshooting',
+      collapsible: true,
+      collapsed: false,
+      link: {type: 'doc', id: 'troubleshooting'},
+      items: [
+          'directories',
+          'double-prompts',
+          'license-activation',
+          'iot',
+          'proxmox',
+          'terminal'
+      ]
+  },
     {
       type: 'category',
       label: 'Legal',
       collapsible: true,
-      collapsed: false,
+      collapsed: true,
       items: [
+          'license',
           'terms-of-service',
           'end-user-license-agreement',
           'privacy-policy',
           'reporter-privacy-policy'
         ]
-    }
+    },
+      'security',
   ],
 };
 
