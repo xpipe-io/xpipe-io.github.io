@@ -1,4 +1,4 @@
-# Two-step connections
+# Double prompts
 
 XPipe utilizes a two-step approach when connecting to a remote system. Essentially, the first connection will be opened in the background to set everything up with init scripts etc. This is also used to validate whether we can actually connect to the system in the first place. If everything is working correctly, and any init scripts are prepared, the first connection is closed, and then a second connection is opened in your terminal.
 

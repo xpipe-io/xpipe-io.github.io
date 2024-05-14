@@ -1,4 +1,4 @@
-# XPipe IOT Devices
+# IOT Devices
 
 You can connect to IOT devices by enabling the `Don't interact with system` for the SSH connection. This option is made for these systems that do not provide fully fledged shell connections
 

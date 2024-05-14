@@ -1,4 +1,4 @@
-# XPipe Proxmox Connection
+# Proxmox Connection
 
 XPipe can now detect your proxmox instances via the SSH connection.
 

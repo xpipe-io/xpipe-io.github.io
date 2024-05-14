@@ -1,13 +1,14 @@
-# XPipe Shortcut handling
-XPipe supports common industrial shortcuts.
+# Keyboard shortcuts
 
-### File browser specific shortcuts
-Files that are right-clicked are also included in a selection.<br/>
-The file list can be navigated with the arrow keys. 
+XPipe supports common shortcuts plus a few custom ones.
+
+### File browser
+
+The file list can be navigated with the arrow keys. You can extend a selection with <kbd>Shift</kbd> and move the cursor while keeping the selection by pressing <kbd>Ctrl</kbd>.
 
 ### Keyboard Shortcuts
 
-| Shortcut       | What it does                             |
+| Shortcut       | Function                                 |
 |----------------|------------------------------------------|
 | CTRL and SHIFT | Can be used to select multiple files     |
 | ALT            | Drag any file you explicitly wanna move  |
@@ -18,7 +19,7 @@ The file list can be navigated with the arrow keys.
 | CTRL+L         | Focus the path location text field       |
 | ALT+HOME       | Goes to the file system overview page    |
 | ALT+H          | Shows the browsing history               |
-| ALT-UP         | Navigates to the parent directory        |
+| ALT+UP         | Navigates to the parent directory        |
 | ESCAPE         | Clears the selection                     |
 | SPACE          | Shows the context menu for the selection |
 
