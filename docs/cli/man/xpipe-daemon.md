@@ -39,6 +39,10 @@
 <dd>
 <p>Stops the XPipe daemon if it is running.</p>
 </dd>
+<dt class="hdlist1"><a href="xpipe-daemon-beacon"><strong>beacon</strong></a></dt>
+<dd>
+<p>Send raw API requests to the XPipe daemon</p>
+</dd>
 <dt class="hdlist1"><a href="xpipe-daemon-help"><strong>help</strong></a></dt>
 <dd>
 <p>Displays help information about the specified command</p>

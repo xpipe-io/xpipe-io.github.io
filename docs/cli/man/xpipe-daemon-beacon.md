@@ -1,14 +1,14 @@
-# xpipe daemon start
+# xpipe daemon beacon
 
 <h2 id="_name">Name</h2>
 <div class="sectionbody">
-<p>xpipe-daemon-start - Starts the XPipe daemon if it is not running</p>
+<p>xpipe-daemon-beacon - Send raw API requests to the XPipe daemon</p>
 </div>
 <div class="sect1">
 <h2 id="_synopsis">Synopsis</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>xpipe daemon start</strong> [<strong>--port</strong>=<em>&lt;port&gt;</em>] [<em>&lt;input&gt;</em>&#8230;&#8203;]</p>
+<p><strong>xpipe daemon beacon</strong> [<strong>--port</strong>=<em>&lt;port&gt;</em>] <em>&lt;path&gt;</em></p>
 </div>
 </div>
 </div>
@@ -16,7 +16,7 @@
 <h2 id="_description">Description</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Starts the XPipe daemon if it is not running</p>
+<p>Send raw API requests to the XPipe daemon</p>
 </div>
 </div>
 </div>
@@ -38,9 +38,9 @@
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1">[<em>&lt;input&gt;</em>&#8230;&#8203;]</dt>
+<dt class="hdlist1"><em>&lt;path&gt;</em></dt>
 <dd>
-<p>Optional arguments to pass to the daemon</p>
+<p>The path to send the API request to. E.g. /open or /version.</p>
 </dd>
 </dl>
 </div>

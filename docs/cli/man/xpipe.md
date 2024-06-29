@@ -16,10 +16,12 @@
 <h2 id="_description">Description</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Command-line interface to interact with the XPipe daemon. Note that the feature set of the CLI is not gigantic as XPipe is primarily designed to be used via the GUI.</p>
+<p>Command-line interface to interact with the XPipe daemon.</p>
 </div>
 <div class="paragraph">
-<p>For a full reference, see either the man pages (local or online) or the help command, available via xpipe --help.</p>
+<p>For a full reference, see either:
+- The man pages (local with man xpipe or online at <a href="https://docs.xpipe.io/cli/man/" class="bare">https://docs.xpipe.io/cli/man/</a>)
+- The command help, available via xpipe &lt;command&gt; --help</p>
 </div>
 </div>
 </div>
@@ -31,22 +33,6 @@
 <dt class="hdlist1"><a href="xpipe-open"><strong>open</strong></a></dt>
 <dd>
 <p>Opens the XPipe application</p>
-</dd>
-<dt class="hdlist1"><a href="xpipe-launch"><strong>launch</strong></a></dt>
-<dd>
-<p>Launches a specified shell connection in your existing terminal session</p>
-</dd>
-<dt class="hdlist1"><a href="xpipe-sink"><strong>sink</strong></a></dt>
-<dd>
-<p>Write the contents of stdin to a remote file.</p>
-</dd>
-<dt class="hdlist1"><a href="xpipe-drain"><strong>drain</strong></a></dt>
-<dd>
-<p>Reads the contents of a remote file and prints it to stdout.</p>
-</dd>
-<dt class="hdlist1"><a href="xpipe-ls"><strong>ls</strong>, <strong>list</strong></a></dt>
-<dd>
-<p>List all stored connections and their ids</p>
 </dd>
 <dt class="hdlist1"><a href="xpipe-daemon"><strong>daemon</strong></a></dt>
 <dd>
@@ -71,7 +57,7 @@
 </dd>
 <dt class="hdlist1"><strong>1</strong></dt>
 <dd>
-<p>Client error: one or more inputs were not correctly specified</p>
+<p>Client error: One or more inputs were not correctly specified</p>
 </dd>
 <dt class="hdlist1"><strong>2</strong></dt>
 <dd>
@@ -79,7 +65,7 @@
 </dd>
 <dt class="hdlist1"><strong>3</strong></dt>
 <dd>
-<p>Connection error: could either not start or communicate to the XPipe daemon</p>
+<p>Connection error: Could either not start or communicate with the XPipe daemon</p>
 </dd>
 </dl>
 </div>

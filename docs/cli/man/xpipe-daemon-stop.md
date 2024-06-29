@@ -8,7 +8,7 @@
 <h2 id="_synopsis">Synopsis</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>xpipe daemon stop</strong> [<strong>-f</strong>]</p>
+<p><strong>xpipe daemon stop</strong> [<strong>-f</strong>] [<strong>--port</strong>=<em>&lt;port&gt;</em>]</p>
 </div>
 </div>
 </div>
@@ -28,6 +28,10 @@
 <dt class="hdlist1"><strong>-f</strong>, <strong>--force</strong></dt>
 <dd>
 <p>Attempts to forcefully kill the running xpipe daemon process. Note that if this option is specified, the daemon process will be killed instantly and no attempt at a graceful shutdown is made.</p>
+</dd>
+<dt class="hdlist1"><strong>--port</strong>=<em>&lt;port&gt;</em></dt>
+<dd>
+<p>The HTTP server port</p>
 </dd>
 </dl>
 </div>

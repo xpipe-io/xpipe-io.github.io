@@ -8,7 +8,7 @@
 <h2 id="_synopsis">Synopsis</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>xpipe daemon mode</strong> <em>&lt;mode&gt;</em></p>
+<p><strong>xpipe daemon mode</strong> [<strong>--port</strong>=<em>&lt;port&gt;</em>] <em>&lt;mode&gt;</em></p>
 </div>
 </div>
 </div>
@@ -17,6 +17,19 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>Switches the operation mode of the XPipe daemon</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_options">Options</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>--port</strong>=<em>&lt;port&gt;</em></dt>
+<dd>
+<p>The HTTP server port</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
