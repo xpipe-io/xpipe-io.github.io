@@ -13,5 +13,5 @@ There are several problems that can occur when trying to activate or validate a 
 ## Offline activation
 
 If you are unable to activate your license online, you can also activate it manually offline. There are two options to do this:
-- Activate the license key in another XPipe installation that has connectivity and copy the file `<User Home>/.xpipe/settings/license` into the directory `<User Home>/.xpipe/settings/` on your target machine and restart XPipe
-- Email us at [sales@xpipe.io](mailto:sales@xpipe.io) so that we can send you an offline license file that you can use
+- If you're only offline temporarily, activate the license key in another XPipe installation that has connectivity and copy the file `<User Home>/.xpipe/settings/license` into the directory `<User Home>/.xpipe/settings/` on your target machine and restart XPipe
+- Email us at [sales@xpipe.io](mailto:sales@xpipe.io) so that we can send you an offline license file that you can use for unlimited offline periods
