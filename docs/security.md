@@ -1,107 +1,115 @@
-# Security
+# Security in XPipe
 
-Due to its nature, XPipe has to handle a lot of sensitive information.
-This can range from passwords for all kinds of servers, to SSH keys, and more.
-Therefore, the security model of XPipe plays a very important role.
+Due to its nature, XPipe has to handle a lot of sensitive data. This can range from passwords for all kinds of servers, to SSH keys, and more. Therefore, the security model of XPipe plays a crucial role. This document summarizes the approach of XPipe when it comes to the security and privacy of your data.
 
-This document summarizes the approach of XPipe when it comes to the security of your sensitive information.
-If any of your questions are left unanswered by this document, feel free to file an
-issue report so your question can be answered individually and can also potentially be included in this document.
+## Security principles
 
-## Reporting a security vulnerability
+XPipe is designed and built upon certain fundamentals that provide additional pillars for security and privacy compared to many other existing solutions.
 
-If you believe that you found a security vulnerability in XPipe,
-you can make use of
-the [private security report feature](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing/privately-reporting-a-security-vulnerability)
-of GitHub.
+### Isolation through a rich client
 
-## Security assumptions
+XPipe is implemented as a rich client application, i.e., a desktop application that you install on your local machine. Any data managed by XPipe is stored and used on your local machine, plus your own systems you choose to connect to. There is no external component to XPipe which comes in contact with your data. As a result, no connection data managed with XPipe leaves your network and your controlled systems. Apart from the license server, which checks whether your plan license is valid and active, there is no type of mandatory web service that the XPipe application sends any kind of connection data to. We have no possibility of monitoring or accessing any of your XPipe connection data.
 
-The general assumption is that the system on which XPipe runs on is not badly infected.
-This refers to your local system on which you installed XPipe, not any remote systems that you then connect to.
-If your local system is infected to an extent where malicious programs can modify the
-file system and other installed programs like XPipe,
-then there is no technical way of preventing malicious programs to also infect XPipe and the connected systems as well.
+### Advanced security through integrations
 
-## Reliance on other programs
+Another component is the compatibility and integration with external tools. As described later in this document, XPipe supports and integrates with many different password managers, git providers, key types, and more. It focuses on allowing you to use your existing and trusted solutions together with XPipe. For example, the XPipe application can be configured to fetch all types of secrets from external sources so that you can use your solution of your choice for secret storage. As a result, you can use XPipe effectively without having to store any secrets in XPipe itself.
 
-XPipe essentially delegates any form of connection and shell handling to your existing command-line tools.
-It does not come with any remote handling capabilities of its own.
-Therefore, any used command-line program should be secure.
-If, for example, your `ssh` command-line program or its connections are susceptible to MITM attacks or
-vulnerable in any other way, there is no way for XPipe to guarantee that the sensitive information can be kept secure.
-It is your responsibility to use the programs in a secure environment and keep them up to date with security patches and
-more.
-XPipe can only be as secure as your underlying command-line tools itself.
+### Transparency through open-source
 
-XPipe calls these programs almost exactly as you would do manually in your terminal
-with some a few additional parameters to automatically pass login information
-and adapt the environment to make it work properly.
-The called program therefore automatically uses your
-system configuration for it, e.g. your system SSH configs.
+XPipe is an open-core project, which means that you can find the application core on [GitHub](https://github.com/xpipe-io/xpipe) licensed under the [Apache License 2.0](https://github.com/xpipe-io/xpipe/blob/master/LICENSE.md). Select parts are not open-source, such as some paid plan features, however, all relevant security implementations for the secret vault storage and others are available for everyone to check out and verify. This provides transparency of our development workflows and visibility into the software you are using, especially when compared to other closed-source solutions.
 
-## Data security and privacy
+## Local vault
 
-The general approach of XPipe can be summarized as follows:
+By default, XPipe will only store data on your local machine.
 
-- Any sensitive information is kept as secure as possible exclusively on your local machine,
-  both while XPipe is running and also not running
-- When sensitive information is required on another remote system that is connected through XPipe, that information
-  remains there as briefly and securely as possible
-- No sensitive information is sent to any other server outside your network of trusted connections
+As a result, there already is a base level of security inherent with XPipe as any potential threat actors do not have access to the XPipe vault, unless, of course, your system is already compromised. Implementing robust security measures for your local systems is therefore already a big step in establishing the best first line of defense for your data in XPipe.
 
-### Storage of sensitive information
+When it comes to the security of the XPipe data itself, we implement and maintain the latest established security standards to securely encrypt and store any sensitive information.
 
-All XPipe connection data is exclusively stored on your local machine at `~/.xpipe/storage`. You can choose to change this storage location in the settings menu.
+### Types of data
 
-You have the option to fetch any sensitive information like passwords from outside sources like password managers or enter them at connection time through a prompt window. In that case, XPipe doesn't have to store any secrets itself.
+When referring to any part of vault data, it can be generally categorized as either general data or sensitive data.
 
-In case you choose to store passwords and other secrets within XPipe, all sensitive information is encrypted when it is saved to disk on your local machine using AES with either:
+Sensitive data refers to things like:
+- Passwords
+- Private keys
 
-- A custom master passphrase that can be set by you in the settings menu
-  (This option is only as secure as the password you choose)
-- A dynamically generated key file at `~/.xpipe/storage/vaultkey` (The data can then only be decrypted with that file present)
+The focus of the vault is securing sensitive data through secure encryption and storage.
 
-By default, general connection data is not encrypted, only secrets are.
-So things like hostnames and usernames are stored without encryption, which is in line with many other tools.
-There is an available setting to encrypt all connection data if you want to do that.
+Any other data stored by XPipe can be categorized as general data. This includes data like:
+- Usernames
+- Hostnames
 
-### Sharing of information across machines / with team members
+With other general data, XPipe does not perform the same encryption by default. This is in line with other tools, e.g., with SSH where the username and hostname will show up in any shell histories and connection logs outside of XPipe. If preferred, you can choose to also encrypt any other general data as well by enabling this in the XPipe settings menu.
 
-XPipe allows you to synchronize your connections with a remote git repository.
-This repository can be set up by yourself with any provider of your choice using any authentication scheme you like.
-XPipe supports all authentication schemes, both HTTP and SSH with advanced options like password prompts, key files, smart cards, and more.
+### External secrets
 
-Any information is then regularly committed to that repository. This repository can then be cloned on other systems or by other collaborators to have access to the same connections. 
+For passwords, you have the option to fetch them from outside sources like password managers or enter them at connection time through a prompt window. In that case, XPipe doesn't have to store any secrets itself. This has the advantage of being able to rely on your trusted password manager for security.
 
-### Passing of sensitive information
+You can configure a password manager setup in the XPipe settings menu. There are already a few templates included for common password managers. Furthermore, it is also possible to implement a fully custom secret retrieval operation workflow for any other kind of password manager.
 
-When any kind of login information is required by a command-line program, it has to be passed to it somehow. If the program runs on your local system, the data does not leave your local system. If login information is required on a remote system, then that data must be transferred to that remote system.
+Other secrets like private keys can also be managed and stored outside of XPipe. As long as the files are retrievable at runtime by XPipe, connections will work fine. You can therefore store and secure your sensitive key files in any way you like with XPipe.
 
-In case a program accepts password input via stdin, this process is relatively straightforward. Then the passed sensitive information is just written into the stdin of the program and does not show up in any history or file system.
+XPipe also supports the use of smartcards and FIDO2 keys which offer a hardware-based authentication solution that does not have the possibility of exposing the underlying private key.
 
-When a program only accepts password input via an environment variable or an askpass program, a self-deleting password supplier script file is generated by XPipe.
-This script contains the encrypted password and will supply the password to the target program exactly once when invoked and immediately deletes itself afterward.
-This behavior ensures that there is no leftover password script after an operation is performed.
-As a secondary measure, for cases in which the calling program crashes and is not able to execute the script and therefore doesn't delete the password script, the generated script directory is also frequently cleaned.
-As a result, no sensitive information of yours should show up in any kind of shell history or on any file system.
+XPipe also supports securely storing passwords and key files in its own vault as seen next.
 
-### The purpose of shell scripts
+### Managed secrets
 
-Whenever you open a remote connection in a terminal from XPipe, your terminal sometimes shows the name of a script located in your temp directory in the title bar to indicate that you're currently executing it.
-The naming scheme of these scripts is usually something like `exec-<id>.(bat|sh|ps1)`.
-This is intended as these scripts contain all commands that are required to realize the functionality of connecting and initializing the shell environment.
-These scripts do not contain any sensitive information, you are free to inspect them yourselves in the temporary directory.
+In case you choose to store passwords and other secrets within XPipe, all sensitive information is encrypted with either:
+- A dynamically generated vault key file (The data can then only be decrypted with that file present)
+- A custom master passphrase that can be set by you in the settings menu, combined with the vault key file (This option is only as secure as the passphrase you choose)
 
-In some cases, e.g., when you want to run shell environment init commands on a remote system, XPipe also has to create shell scripts on the remote system.
-If you don't want XPipe to modify the remote file system under any circumstances, there is a setting to completely disable this behavior.
+The detailed encryption algorithm is an AES-128 GCM block-cipher with 12 IV bytes and 128 tag bits. The encryption keys are generated with a [Password-based key-derivation algorithm (PBKDF)](https://datatracker.ietf.org/doc/html/rfc8018) using SHA-256 HMAC. The full secret encryption implementation is open source and available on [GitHub](https://github.com/xpipe-io/xpipe/blob/master/core/src/main/java/io/xpipe/core/util/AesSecretValue.java). It is important that your supplied passphrase provides a high level of entropy in order to guarantee the best possible encryption.
+
+## Remote vaults
+
+To seamlessly synchronize your connection data with other devices and team members, XPipe allows you to synchronize your connections with a remote git repository. Any updates and connection data are then regularly committed to that repository by XPipe. This repository can then be cloned on other systems or by other collaborators to have access to the same connections.
+
+### Repository access
+
+This repository can be set up by yourself with any git service provider of your choice using the authentication scheme you prefer. XPipe supports all authentication schemes, both HTTP and SSH with advanced options like password prompts, key files, smartcards, and more. This guarantees the best possible control of your repository security as you can use your existing git solution to host the XPipe vault and your own tools to connect to it.
+
+### File encryption
+
+When choosing to add a key file to the vault, you have the ability to also sync it with the remote git repository. This allows you to synchronize any required key files across all systems so you don't have to be concerned about missing key files on other systems. Any secret files committed to the repository are only committed in encrypted form similar to vault passwords. They will only be decrypted on the local system after pulling the remote data. This ensures that your remote vault does only contain encrypted sensitive data.
+
+## Connections
+
+When establishing connections, XPipe essentially delegates any form of connection and shell handling to your existing command-line tools. It does not come with any remote handling capabilities of its own. Therefore, the security of the established connection depends on your used command-line programs.
+
+If, for example, your `ssh` command-line program or its connections are outdated and susceptible to MITM attacks or vulnerable in any other way, there is no way for XPipe to guarantee that data can be transferred securely. It is your responsibility to use external programs that XPipe interacts with in a secure environment and keep them up to date with security patches and more. Connections established with XPipe can only be as secure as your underlying command-line tools itself.
+
+## Corporate security
+
+The security of our technology is not the only focus. We also place high importance on organizational practices and processes throughout our development and business operations. Our development workflow incorporates best practices from [OWASP](https://owasp.org/) to build secure software.
+
+This includes, for example, static code analysis, which is a testing methodology that analyzes source code to find security vulnerabilities that make our applications susceptible to attacks. We also monitor any supply-chain vulnerabilities and monitor any third-party dependencies for potential vulnerabilities and updates.
+
+By prioritizing secure within our organization, we are able to develop and deliver robust and trustworthy applications.
+
+## Other data handling
+
+Aside from the secure storage of data in the vault, there are a few other areas in which your data is used. This section will elaborate on each of these cases.
 
 ### Logging
 
-By default, XPipe creates log files located in `~/.xpipe/logs`. These log files do not contain any sensitive information.
-If you choose to launch XPipe in debug mode, log information is printed to the console instead and will contain a lot more and finer grained information, some of which might be sensitive.
+By default, XPipe creates local log files. These log files do not contain any sensitive data.
+
+If you are troubleshooting an issue, launching XPipe in debug mode might sometimes be useful. In debug mode, log information is printed to the console instead and will contain a lot more and finer grained information, some of which might be sensitive. However, this information is not written to a file and will only be displayed temporarily in a console window.
+
+In summary, log files will not contain any sensitive data.
 
 ### Issue reports
 
-Whenever an error occurs within XPipe or you choose to open the error reporter dialog, you have the option to automatically send an error report with optional feedback and attachments.
-This error report does not contain any personal information unless you explicitly choose to attach log files.
+Whenever an error occurs within XPipe or you choose to open the error reporter dialog, you can automatically send an error report with optional feedback and attachments. This is a purely optional choice if you want to quickly provide additional error context information to help the development team speed up their bugfixing process.
+
+This error report does not contain any personal data unless you explicitly choose to attach log files. If you do so, the error report will contain various types of general data such as hostnames, usernames, and more. However, no sensitive data is included. We are an european company, so we adhere to the GDPR. The privacy policy for the error reporting feature can be found at https://docs.xpipe.io/reporter-privacy-policy. The general privacy policy for the XPipe application itself can be found at https://docs.xpipe.io/privacy-policy.
+
+## Outlook
+
+We hope that this document summarized the approach of XPipe when it comes to security and privacy. If any of your questions are left unanswered by this document, feel free to reach out to us at [security@xpipe.io](mailto:security@xpipe.io) so your question can be answered individually and can also potentially be included in this document.
+
+### Reporting a security vulnerability
+
+If you believe that you found a security vulnerability in XPipe, you can make use of the [private security report feature](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing/privately-reporting-a-security-vulnerability) of GitHub to ensure a confidential handling of this matter.
