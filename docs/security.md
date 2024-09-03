@@ -18,7 +18,7 @@ Another component is the compatibility and integration with external tools. As d
 
 XPipe is an open-core project, which means that you can find the application core on [GitHub](https://github.com/xpipe-io/xpipe) licensed under the [Apache License 2.0](https://github.com/xpipe-io/xpipe/blob/master/LICENSE.md). Select parts are not open-source, such as some paid plan features, however, all relevant security implementations for the secret vault storage and others are available for everyone to check out and verify. This provides transparency of our development workflows and visibility into the software you are using, especially when compared to other closed-source solutions.
 
-## Local vault
+## Local vaults
 
 By default, XPipe will only store data on your local machine.
 
@@ -80,17 +80,23 @@ When establishing connections, XPipe essentially delegates any form of connectio
 
 If, for example, your `ssh` command-line program or its connections are outdated and susceptible to MITM attacks or vulnerable in any other way, there is no way for XPipe to guarantee that data can be transferred securely. It is your responsibility to use external programs that XPipe interacts with in a secure environment and keep them up to date with security patches and more. Connections established with XPipe can only be as secure as your underlying command-line tools itself.
 
-## Corporate security
+## Outbound requests
 
-The security of our technology is not the only focus. We also place high importance on organizational practices and processes throughout our development and business operations. Our development workflow incorporates best practices from [OWASP](https://owasp.org/) to build secure software.
+The XPipe application itself only sends requests to two external services under certain conditions. These requests are initiated from the XPipe application, it does not listen or respond to requests that were initiated from any external services.
 
-This includes, for example, static code analysis, which is a testing methodology that analyzes source code to find security vulnerabilities that make our applications susceptible to attacks. We also monitor any supply-chain vulnerabilities and monitor any third-party dependencies for potential vulnerabilities and updates.
+### Licensing
 
-By prioritizing secure within our organization, we are able to develop and deliver robust and trustworthy applications.
+The first one is the licensing API of our payment provider [LemonSqueezy](https://lemonsqueezy.com) to which the XPipe application communicates to validate a license. This will send one request on startup to `https://api.lemonsqueezy.com` with only the license key for validation purposes. This request is only sent if a license is active. The community edition of XPipe does not perform this request.
+
+We offer fully offline licenses that do not require an internet connection for our customers at no additional cost. If you are planning to deploy XPipe in an air-gapped environment with no outside internet connectivity, you can request offline licenses by sending an email to [sales@xpipe.io](mailto:sales@xpipe.io). These offline licenses can also be used if the LemonSqueezy API servers are blocked or not whitelisted and can't be reached by the XPipe application in other cases.
+
+### Error reports
+
+The second service the XPipe application communicates with is the error-tracking service [Sentry](https://sentry.io/). This service is used to diagnose newly introduced problems, keep track of errors, and prevent exploits. Requests are sent when an unexpected error occurs in the XPipe application. So under normal operation, no requests are sent. Requests are sent to [ingest.sentry.io](https://o1084459.ingest.sentry.io). These requests do not contain any personal or sensitive data and are stripped of any contextual information. They are intended to show trends of new developing errors and are not intended to diagnose or troubleshoot individual error cases. The only information they contain is the OS name/version/architecture, XPipe version, an anonymized user ID that is used to group issues, and the stack trace without error message.
 
 ## Other data handling
 
-Aside from the secure storage of data in the vault, there are a few other areas in which your data is used. This section will elaborate on each of these cases.
+There are also a few other miscellaneous areas where your data is used such as log files and voluntary issue reports.
 
 ### Logging
 
@@ -102,9 +108,17 @@ In summary, log files will not contain any sensitive data.
 
 ### Issue reports
 
-Whenever an error occurs within XPipe or you choose to open the error reporter dialog, you can automatically send an error report with optional feedback and attachments. This is a purely optional choice if you want to quickly provide additional error context information to help the development team speed up their bugfixing process.
+Whenever an error occurs within XPipe, you can choose to automatically send an error report with feedback and attachments. This is a purely optional choice if you want to quickly provide additional error context information to help the development team speed up their bugfixing process.
 
-This error report does not contain any personal data unless you explicitly choose to attach log files. If you do so, the error report will contain various types of general data such as hostnames, usernames, and more. However, no sensitive data is included. We are an european company, so we adhere to the GDPR. The privacy policy for the error reporting feature can be found at https://docs.xpipe.io/reporter-privacy-policy. The general privacy policy for the XPipe application itself can be found at https://docs.xpipe.io/privacy-policy.
+If you do so, the error report will contain various types of general data such as hostnames, usernames, and more. This error report can contain personal or sensitive data depending on the error trace and context. We are an european company, so we adhere to the GDPR. The privacy policy for the error reporting feature can be found at https://docs.xpipe.io/reporter-privacy-policy. The general privacy policy for the XPipe application itself can be found at https://docs.xpipe.io/privacy-policy.
+
+## Corporate security
+
+The security of our technology is not the only focus. We also place high importance on organizational practices and processes throughout our development and business operations. Our development workflow incorporates best practices from [OWASP](https://owasp.org/) to build secure software.
+
+This includes, for example, static code analysis, which is a testing methodology that analyzes source code to find security vulnerabilities that make our applications susceptible to attacks. We also monitor any supply-chain vulnerabilities and monitor any third-party dependencies for potential vulnerabilities and updates.
+
+By prioritizing secure within our organization, we are able to develop and deliver robust and trustworthy applications.
 
 ## Outlook
 
