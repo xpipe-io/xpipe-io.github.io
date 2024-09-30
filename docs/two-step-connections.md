@@ -4,6 +4,6 @@ XPipe utilizes a two-step approach when connecting to a remote system. Essential
 
 ## Consequences
 
-As a result of this approach, some authentication systems might prompt twice for any authentication if they do not support caching or reusing the same authentication tokens for a short period of time. An example would be an SSH connection setup with two-factor authentication. Men opening such a connection with XPipe it might ask you for an authentication code twice. If the authentication policy does not allow reusing authentication codes for a short period, you might have to wait until a new authentication code is generated.
+As a result of this approach, some authentication systems might prompt twice for any authentication if they do not support caching or reusing the same authentication tokens for a short period of time. An example would be an SSH connection setup with two-factor authentication. When opening such a connection with XPipe, it might ask you for an authentication code twice. If the authentication policy does not allow reusing authentication codes for a short period, you might have to wait until a new authentication code is generated.
 
-With the current connection approach of XPipe, it is not possible to work around this restriction as it depends on these two steps. 
+XPipe tries to optimize the number of required connections in the background, so it should only require a double prompt once in a while.

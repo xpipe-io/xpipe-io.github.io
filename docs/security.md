@@ -8,7 +8,7 @@ XPipe is designed and built upon certain fundamentals that provide additional pi
 
 ### Isolation through a rich client
 
-XPipe is implemented as a rich client application, i.e., a desktop application that you install on your local machine. Any data managed by XPipe is stored and used on your local machine, plus your own systems you choose to connect to. There is no external component to XPipe which comes in contact with your data. As a result, no connection data managed with XPipe leaves your network and your controlled systems. Apart from the license server, which checks whether your plan license is valid and active, there is no type of mandatory web service that the XPipe application sends any kind of connection data to. We have no possibility of monitoring or accessing any of your XPipe connection data.
+XPipe is implemented as a rich client application, i.e., a desktop application that you install on your local machine. Any data managed by XPipe is stored and used on your local machine, plus your own systems you choose to connect to. There is no external component to XPipe which comes in contact with your connection data. As a result, no connection data managed with XPipe leaves your network and your controlled systems. There is no type of mandatory web service that the XPipe application sends any kind of connection data to. We have no possibility of monitoring or accessing any of your data that is managed in XPipe.
 
 ### Advanced security through integrations
 
@@ -62,9 +62,13 @@ In case you choose to store passwords and other secrets within XPipe, all sensit
 
 The detailed encryption algorithm is an AES-128 GCM block-cipher with 12 IV bytes and 128 tag bits. The encryption keys are generated with a [Password-based key-derivation algorithm (PBKDF)](https://datatracker.ietf.org/doc/html/rfc8018) using SHA-256 HMAC. The full secret encryption implementation is open source and available on [GitHub](https://github.com/xpipe-io/xpipe/blob/master/core/src/main/java/io/xpipe/core/util/AesSecretValue.java). It is important that your supplied passphrase provides a high level of entropy in order to guarantee the best possible encryption.
 
+### Prompted secrets
+
+Alternatively, you can also choose to prompt for some required secrets at runtime so you don't have to store a password for a connection anywhere. With XPipe, you have the option to input the password when you connect to that system and optionally cache it for the current XPipe session, so you don't have to reenter it until XPipe is restarted. This has the advantage of the password not being stored on any file system as it only persists in the main memory while XPipe is running.
+
 ## Remote vaults
 
-To seamlessly synchronize your connection data with other devices and team members, XPipe allows you to synchronize your connections with a remote git repository. Any updates and connection data are then regularly committed to that repository by XPipe. This repository can then be cloned on other systems or by other collaborators to have access to the same connections.
+To seamlessly synchronize your connection data with other devices and team members, XPipe allows you to synchronize your connections with a remote git repository. Any updates and connection data from the local vault are then regularly committed to that repository by XPipe. This repository can then be cloned on other systems or by other collaborators to have access to the same connections.
 
 ### Repository access
 
@@ -74,11 +78,25 @@ This repository can be set up by yourself with any git service provider of your 
 
 When choosing to add a key file to the vault, you have the ability to also sync it with the remote git repository. This allows you to synchronize any required key files across all systems so you don't have to be concerned about missing key files on other systems. Any secret files committed to the repository are only committed in encrypted form similar to vault passwords. They will only be decrypted on the local system after pulling the remote data. This ensures that your remote vault does only contain encrypted sensitive data.
 
+### Security of remote vaults
+
+Having connection data stored in a remote git service always bears the risk of this service being compromised and the git repository connection data being stolen. This risk also applies to local systems and its vaults being compromised, with the difference being that remote vaults are usually accessible from many users within a network.
+
+The same security principles of local vaults also apply to remote vaults. The remote vault does not have to store any secrets if the vault is set up to fetch external secrets from providers like password managers. If the vault contains managed secrets, encrypting the vault with a strong custom passphrase should prevent any possible decryption of connection data. 
+
 ## Connections
 
 When establishing connections, XPipe essentially delegates any form of connection and shell handling to your existing command-line tools. It does not come with any remote handling capabilities of its own. Therefore, the security of the established connection depends on your used command-line programs.
 
 If, for example, your `ssh` command-line program or its connections are outdated and susceptible to MITM attacks or vulnerable in any other way, there is no way for XPipe to guarantee that data can be transferred securely. It is your responsibility to use external programs that XPipe interacts with in a secure environment and keep them up to date with security patches and more. Connections established with XPipe can only be as secure as your underlying command-line tools itself.
+
+### Secret transfer
+
+When any kinds of passwords are required by a command-line program, these secrets have to be passed to it somehow.
+
+In case a program accepts password input via stdin, this process is relatively straightforward. Then the secret information is just written into the stdin of the program and does not show up in any shell history.
+
+In case the program supports askpass programs that can supply passwords, as is the case with tools like ssh and sudo, XPipe will act as an askpass program that will provide the necessary secrets to programs. These programs are then configured via environment variables to call the XPipe executable for any secret requests. Any returned secrets by XPipe do not show up in any shell history or file system in this case.
 
 ## Outbound requests
 
@@ -118,7 +136,7 @@ The security of our technology is not the only focus. We also place high importa
 
 This includes, for example, static code analysis, which is a testing methodology that analyzes source code to find security vulnerabilities that make our applications susceptible to attacks. We also monitor any supply-chain vulnerabilities and monitor any third-party dependencies for potential vulnerabilities and updates.
 
-By prioritizing secure within our organization, we are able to develop and deliver robust and trustworthy applications.
+By prioritizing security within our organization, we are able to develop and deliver robust and trustworthy applications.
 
 ## Outlook
 

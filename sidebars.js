@@ -20,14 +20,24 @@ const sidebars = {
     'index',
     {
       type: 'category',
+      label: 'Information',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'directories',
+        'security',
+      ]
+    },
+    {
+      type: 'category',
       label: 'XPipe CLI',
       collapsible: true,
       collapsed: true,
       link: {type: 'doc', id: 'cli/index'},
       items: [
-          'cli/basics',
-          //'cli/example',
-          //'cli/tips',
+        'cli/basics',
+        //'cli/example',
+        //'cli/tips',
         {
           type: 'category',
           label: 'Manpages',
@@ -39,19 +49,24 @@ const sidebars = {
         }
       ],
     },
-    'directories',
-    'two-step-connections',
-    'preview',
-    'license-activation',
-    'security',
-    'troubleshooting',
-    'license',
+    {
+      type: 'category',
+      label: 'Troubleshooting',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'two-step-connections',
+        'license-activation',
+        'ssh-agent-socket',
+      ]
+    },
     {
       type: 'category',
       label: 'Legal',
       collapsible: true,
       collapsed: false,
       items: [
+          'license',
           'terms-of-service',
           'end-user-license-agreement',
           'privacy-policy',
