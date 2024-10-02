@@ -52,6 +52,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Troubleshooting',
+      link: {type: 'doc', id: 'troubleshooting'},
       collapsible: true,
       collapsed: false,
       items: [
